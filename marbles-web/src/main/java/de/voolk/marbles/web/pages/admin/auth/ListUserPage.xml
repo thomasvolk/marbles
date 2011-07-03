@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="id">ID</entry>
+    <entry key="name">Name</entry>
+    <entry key="email">E-Mail</entry>
+    <entry key="remove">Remove</entry>
+    <entry key="remove.confirmation">Do you really want to remove user '${user}' ?</entry>
+</properties>

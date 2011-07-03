@@ -1,0 +1,57 @@
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+ <head>
+        <title>Marbles</title>
+    <link rel="stylesheet" type="text/css" href="../pages/base/default.css" />
+</head>
+    <body>
+
+    <div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">Marbles   </a></h1>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu" wicket:id="menu">
+
+      <wicket:panel>
+      <ul>
+          <li wicket:id="items">
+              <a wicket:id="link"><span wicket:id="title">page ...</span></a>
+          </li>
+      </ul>
+      <ul style="float: right;">
+          <li>
+              <a><span wicket:id="userName">Thomas</span></a>
+          </li>
+          <li>
+              <a wicket:id="logoutPage"><wicket:message key="logout"/></a>
+          </li>
+      </ul>
+      </wicket:panel>
+
+</div>
+	<!-- end #menu -->
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+		<div id="content">
+
+		<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer">
+	</div>
+	<!-- end #footer -->
+
+    </body>
+</html>

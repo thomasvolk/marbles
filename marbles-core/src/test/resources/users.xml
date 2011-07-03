@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auth>
+<users>
+  <user>
+    <name>u1</name>
+    <email>thomas@my-volk.de</email>
+    <password>adminpw</password>
+  	<roles class="set">
+  	  <role>
+  	  	<name>r1</name>
+  	  </role>
+  	  <role>
+  	    <name>r2</name>
+  	  </role>
+  	</roles>
+  </user>
+  <user>
+    <name>u2</name>
+    <email>thomas@my-volk.de</email>
+    <password>guestpw</password>
+  	<roles class="set">
+  	  <role>
+  	    <name>r1</name>
+  	  </role>
+  	</roles>
+  </user>
+  <user>
+    <name>u3</name>
+    <email>thomas@my-volk.de</email>
+    <password>testpw</password>
+  	<identKey>testIdentKey</identKey>
+  	<roles class="set">
+  	  <role>
+  	    <name>r2</name>
+  	  </role>
+  	</roles>
+  </user>
+</users>
+</auth>

@@ -1,0 +1,95 @@
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd ">
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="../base/default.css"/>
+</head>
+
+<body>
+
+
+<div id="wrapper">
+    <div id="header" wicket:id="header">
+        <div id="logo">
+            <h1><a href="#">Marbles </a></h1>
+
+            <p> by <a href="http://my-volk.de/">Thomas Volk</a></p>
+        </div>
+    </div>
+    <!-- end #header -->
+    <div id="menu">
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>Test</a></li>
+        </ul>
+    </div>
+    <!-- end #menu -->
+    <div id="page">
+        <div id="page-bgtop">
+            <div id="page-bgbtm">
+                <div id="content">
+
+                    <div class="breadcrumb">
+                    <p class="meta">
+                    <span class="date">
+                    <ul>
+                    <li >
+                        <a >
+                            <span>ROOT</span>
+                        </a>
+                    </li>
+                    <li><a><span>FirstChild</span></a></li>
+                    <li><a><span>SecondChild</span></a></li>
+                    </ul>
+                    </span>
+                    </p>
+                    </div>
+                    <div style="clear: both;">&nbsp;</div>
+
+                    <wicket:extend>
+
+                        <div wicket:id="breadcrumb"></div>
+
+                        <div class="pageContent" wicket:id="page">
+                            <wicket:remove>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+                             <br/>
+                                   <a  href="/marbles/page?id=3">ChildPage</a>
+                             <br/>
+                                   <a class="create" href="/marbles/page/new?parent=2&name=ChildPage2">new ChildPage2</a>
+                             <br/>
+                            </wicket:remove>
+                        </div>
+
+                    </wicket:extend>
+
+
+                    <div style="clear: both;">&nbsp;</div>
+                </div>
+                <!-- end #content -->
+                <div id="sidebar">
+                     <ul>
+                   <li>
+                       <h2>Page</h2>
+					<ul>
+						<li>Create page</li>
+					</ul>
+				</li>
+               </ul>
+
+                </div>
+                <!-- end #sidebar -->
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <!-- end #page -->
+</div>
+<div id="footer">
+    <p>Copyright (c) 2011 by <a href="http://my-volk.de/">Thomas Volk</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<auth>
+<users>
+  <user>
+    <name>admin</name>
+    <email>thomas@my-volk.de</email>
+    <password>1412e25161ef042b85c59c60a87705a5</password>
+  	<roles class="set">
+  	  <role>
+  	  	<name>admin</name>
+  	  </role>
+  	  <role>
+  	    <name>user</name>
+  	  </role>
+  	  <role>
+  	    <name>system</name>
+  	  </role>
+  	</roles>
+  </user>
+  <user>
+    <name>guest</name>
+    <email>thomas@my-volk.de</email>
+    <password>a610048f1672991e20b5eee860e9a087</password>
+  	<roles class="set">
+  	  <role>
+  	    <name>user</name>
+  	  </role>
+  	</roles>
+  </user>
+</users>
+</auth>
