@@ -443,7 +443,6 @@ div.breadcrumb {
     padding: 0px 0px 0px 0px;
     margin: 0 auto;
     height: 20px;
-    border-bottom: 1px solid #E9E3CB;
 }
 
 div.breadcrumb ul {
@@ -456,7 +455,6 @@ div.breadcrumb ul {
 div.breadcrumb li {
     padding: 0px 6px 0px 6px;
     float: left;
-    border-left: 1px solid #E9E3CB;
 }
 
 div.breadcrumb li:first-child {
@@ -467,12 +465,15 @@ div.breadcrumb li:first-child {
 div.breadcrumb a {
 	border: none;
 	color: #464032;
-    font-size: 20px;
-    font-style: italic;
-
+    font-size: 16px;
 }
 
 div.breadcrumb a:hover {
 	text-decoration: underline;
 	color: #8A8A8A;
+}
+
+a.arrow {
+	background: url(arrow_right.png) no-repeat scroll 0 0.3em transparent;
+	padding: 0 0 0 20px;
 }
