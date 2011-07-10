@@ -6,4 +6,7 @@ public interface IPage extends IIdentifiable {
     String getName();
 
     boolean isRoot();
+
+    IPage getParent();
+
 }

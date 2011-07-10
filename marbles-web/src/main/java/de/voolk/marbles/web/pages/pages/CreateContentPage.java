@@ -48,6 +48,11 @@ public class CreateContentPage extends EditContentPage {
             return null;
         }
 
+		@Override
+		public IPage getParent() {
+			return null;
+		}
+
     }
 
     public CreateContentPage(PageParameters parameters) {

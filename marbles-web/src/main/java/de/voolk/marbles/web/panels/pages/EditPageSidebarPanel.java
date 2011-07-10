@@ -9,7 +9,7 @@ import org.apache.wicket.model.StringResourceModel;
 import org.apache.wicket.util.value.ValueMap;
 
 import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.web.pages.pages.DisplayContentPage;
+import de.voolk.marbles.web.pages.pages.DeleteContentPage;
 import de.voolk.marbles.web.pages.pages.EditContentPage;
 import de.voolk.marbles.web.panels.ReplacingConfirmationActionPanel;
 
@@ -40,7 +40,7 @@ public class EditPageSidebarPanel extends Panel {
                     public void execute() {
                     	PageParameters parameters = new PageParameters();
                         parameters.put("id", marblesPage.getId());
-                        setResponsePage(DisplayContentPage.class, parameters);
+                        setResponsePage(DeleteContentPage.class, parameters);
                     }
                 };
             }

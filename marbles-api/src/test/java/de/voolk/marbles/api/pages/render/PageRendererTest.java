@@ -47,6 +47,11 @@ public class PageRendererTest {
             public Integer getId() {
                 return 8;
             }
+
+			@Override
+			public IPage getParent() {
+				return null;
+			}
         };
         assertEquals("Test Page\n<br/>\nLINK[parent=8,name=NewPage] Foo Bar\n<br/>\n123456",
                 renderer.toHtml(page));

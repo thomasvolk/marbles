@@ -21,9 +21,9 @@ import javax.persistence.Table;
 import de.voolk.marbles.api.beans.IPage;
 
 @NamedQueries(value = {
-        @NamedQuery(name = "page:rootPage", 
+        @NamedQuery(name = "page:rootPage",
         		query = "select object(p) from Page p where parent is null and user = :user"),
-		@NamedQuery(name = "page:listByUser", 
+		@NamedQuery(name = "page:listByUser",
         		query = "select object(p) from Page p where user = :user"),
         @NamedQuery(name = "page:byUserAndId",
         		query = "select object(p) from Page p where id = :id and user = :user"),
@@ -34,7 +34,7 @@ import de.voolk.marbles.api.beans.IPage;
 @Table(name = "page")
 public class Page implements Serializable, IPage {
 	private static final long serialVersionUID = 2L;
-	
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -49,7 +49,7 @@ public class Page implements Serializable, IPage {
     private User user;
     @OneToMany(cascade = CascadeType.ALL)
     private Collection<Page> children;
-    
+
 	@Override
     public String getContent() {
 		return content;
@@ -108,4 +108,5 @@ public class Page implements Serializable, IPage {
     public void setName(String name) {
         this.name = name;
     }
+
 }
