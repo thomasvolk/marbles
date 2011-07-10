@@ -287,14 +287,6 @@ a:hover {
 	margin: 0px 30px;
 }
 
-#sidebar li li span {
-	display: block;
-	margin-top: -20px;
-	padding: 0;
-	font-size: 11px;
-	font-style: italic;
-}
-
 #sidebar h2 {
 	padding-left: 30px;
 	padding-top: 6px;
@@ -310,6 +302,13 @@ a:hover {
 	padding: 10px 30px 20px 30px;
 	text-align: justify;
 }
+
+
+#sidebar li li span {
+	border: none;
+	color: #AAAAAA;
+}
+
 
 #sidebar a {
 	border: none;

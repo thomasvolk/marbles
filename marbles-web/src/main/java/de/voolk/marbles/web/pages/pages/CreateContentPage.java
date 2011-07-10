@@ -9,7 +9,7 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.authorization.strategies.role.annotations.AuthorizeInstantiation;
 
 import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.web.panels.pages.CancelSidebarPanel;
+import de.voolk.marbles.web.panels.pages.EditPageSidebarPanel;
 
 @AuthorizeInstantiation("user")
 public class CreateContentPage extends EditContentPage {
@@ -81,10 +81,10 @@ public class CreateContentPage extends EditContentPage {
         return getPageSession().createPage(getMarblesParentPage().getId(),
                 getMarblesPageName(), content).getId();
     }
-    
+
     @Override
     protected Component createSidebarPanel(String id) {
-        return new CancelSidebarPanel(id, getMarblesParentPage().getId(), 
+        return new EditPageSidebarPanel(this, id, getMarblesParentPage(),
         		getDisplayPageClass());
     }
 
