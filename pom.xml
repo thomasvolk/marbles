@@ -3,8 +3,9 @@
 	<groupId>de.voolk.marbles</groupId>
 	<artifactId>marbles</artifactId>
 	<packaging>pom</packaging>
-	<version>1.0</version>
+	<version>${marbles.version}</version>
 	<properties>
+	  <marbles.version>1.1</marbles.version>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <developers>

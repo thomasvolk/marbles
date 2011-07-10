@@ -6,11 +6,11 @@
 	<parent>
 		<artifactId>marbles</artifactId>
 		<groupId>de.voolk.marbles</groupId>
-		<version>1.0</version>
+		<version>${marbles.version}</version>
 	</parent>
 	<groupId>de.voolk.marbles</groupId>
 	<artifactId>marbles-core</artifactId>
-	<version>1.0</version>
+	<version>${marbles.version}</version>
 	<name>marbles-core</name>
 	<packaging>jar</packaging>
 	<url>http://maven.apache.org</url>
@@ -26,7 +26,7 @@
         <dependency>
         <artifactId>marbles-api</artifactId>
         <groupId>de.voolk.marbles</groupId>
-        <version>1.0</version>
+        <version>${marbles.version}</version>
         </dependency>
 
 		<dependency>
