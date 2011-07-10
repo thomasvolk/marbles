@@ -40,13 +40,22 @@ public class BreadCrumbPanel extends Panel {
                 IModel name = new Model<String>(page.getName());
 
                 parameters.put("id", page.getId());
-                Link link = new BookmarkablePageLink("link", 
+                Link link = new BookmarkablePageLink("link",
                 		getDisplayPageClass(), parameters);
                 if(page.isRoot()) {
                     name = new StringResourceModel("root", null);
                 }
                 link.add(new Label("name", name));
+                String sep;
+                if(page.isRoot()) {
+                	sep = "";
+                }
+                else {
+                	sep = ">";
+                }
+                Label separator = new Label("sep", sep);
                 iPageListItem.add(link);
+                iPageListItem.add(separator);
             }
 
         });
@@ -54,5 +63,5 @@ public class BreadCrumbPanel extends Panel {
 
     protected Class<? extends Page> getDisplayPageClass() {
 		return DisplayContentPage.class;
-	}    
+	}
 }

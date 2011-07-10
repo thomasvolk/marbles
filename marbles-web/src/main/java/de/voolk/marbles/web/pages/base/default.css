@@ -211,16 +211,21 @@ a:hover {
 
 #breadcrumb li {
 	margin: 0px 0px 0px 0px;
-    padding: 0px 6px 0px 6px;
+    padding: 0px 0px 0px 0px;
     float: left;
 }
 
+#breadcrumb span.separator {
+	padding: 0px 4px 0px 4px;
+}
+
 #breadcrumb li:first-child {
-    padding: 0px 6px 0px 0px;
+    padding: 0px 0px 0px 0px;
     border-left: none;
 }
 
 #breadcrumb a {
+	padding: 0px 0px 0px 0px;
 	border: none;
 	color: #464032;
     font-size: 10px;
