@@ -151,7 +151,8 @@ a:hover {
 	height: 36px;
 	margin: 0 auto;
 	padding: 0;
-	background-color: #E1E1E1;
+	background-color: #FFFFFF;
+	border: 1px solid #E1E1E1;
 }
 
 #menu ul {
@@ -189,6 +190,48 @@ a:hover {
 	color: #2A1F0B;
 }
 
+/* Breadcrumb */
+
+#breadcrumb {
+    padding: 0px 0px 0px 0px;
+    margin: 0 auto;
+    width: 720px;
+	height: 20px;
+	font-size: 10px;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+#breadcrumb ul {
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#breadcrumb li {
+	margin: 0px 0px 0px 0px;
+    padding: 0px 6px 0px 6px;
+    float: left;
+}
+
+#breadcrumb li:first-child {
+    padding: 0px 6px 0px 0px;
+    border-left: none;
+}
+
+#breadcrumb a {
+	border: none;
+	color: #464032;
+    font-size: 10px;
+}
+
+#breadcrumb a:hover {
+	text-decoration: underline;
+	color: #8A8A8A;
+}
+
+
 /* Page */
 
 #page {
@@ -197,88 +240,19 @@ a:hover {
 	padding: 0;
 }
 
-#page-bgtop {
-	padding: 20px px;
-}
-
-#page-bgbtm {
-}
-
 /* Content */
 
 #content {
-	float: right;
+	float: left;
 	width: 720px;
 	padding: 0px 0px 0px 0px;
 }
 
-.post {
-	margin-bottom: 15px;
-}
-
-.post-bgtop {
-}
-
-.post-bgbtm {
-}
-
-.post .title {
-	margin-bottom: 10px;
-	padding: 12px 0 0 0px;
-	letter-spacing: -.5px;
-	color: #000000;
-}
-
-.post .title a {
-	color: #A7430F;
-	border: none;
-}
-
-.post .meta {
-	height: 30px;
-	border-bottom: 1px solid #E9E3CB;
-	margin: 0px;
-	padding: 0px 0px 0px 0px;
-	text-align: left;
-	font-size: 13px;
-	font-weight: bold;
-}
-
-.post .meta .date {
-	float: left;
-	height: 24px;
-	padding: 3px 0px;
-	color: #464032;
-}
-
-.post .meta .posted {
-	float: right;
-	height: 24px;
-	padding: 3px 15px;
-	background: #FFFFFF;
-	color: #464032;
-}
-
-.post .meta a {
-	color: #464032;
-}
-
-.post .entry {
-	padding: 0px 0px 20px 0px;
-	padding-bottom: 20px;
-	text-align: justify;
-}
-
-.links {
-	padding-top: 20px;
-	font-size: 12px;
-	font-weight: bold;
-}
 
 /* Sidebar */
 
 #sidebar {
-	float: left;
+	float: right;
 	width: 180px;
 	padding: 0px;
 	color: #000000;
@@ -425,7 +399,7 @@ form div.buttons {
 div.confirmationBox {
 	font-weight: bold;
     padding: 10px 10px 10px 10px;
-    background: #d3a187;
+    background: #FFFFFF;
     border: 1px solid #FF0000;
     font-size: 14px;
 }
@@ -439,39 +413,6 @@ div.confirmationBox a {
 	font-weight: bold;
 }
 
-div.breadcrumb {
-    padding: 0px 0px 0px 0px;
-    margin: 0 auto;
-    height: 20px;
-}
-
-div.breadcrumb ul {
-	margin: 0px 0px 0px 0px;
-	padding: 0;
-	list-style: none;
-	line-height: normal;
-}
-
-div.breadcrumb li {
-    padding: 0px 6px 0px 6px;
-    float: left;
-}
-
-div.breadcrumb li:first-child {
-    padding: 0px 6px 0px 0px;
-    border-left: none;
-}
-
-div.breadcrumb a {
-	border: none;
-	color: #464032;
-    font-size: 16px;
-}
-
-div.breadcrumb a:hover {
-	text-decoration: underline;
-	color: #8A8A8A;
-}
 
 a.arrow {
 	background: url(arrow_right.png) no-repeat scroll 0 0.3em transparent;
