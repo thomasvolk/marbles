@@ -90,7 +90,7 @@ public class CreateContentPage extends EditContentPage {
     @Override
     protected Component createSidebarPanel(String id) {
         return new EditPageSidebarPanel(this, id, getMarblesParentPage(),
-        		getDisplayPageClass());
+        		getDisplayPageClass(), getPageSession());
     }
 
 

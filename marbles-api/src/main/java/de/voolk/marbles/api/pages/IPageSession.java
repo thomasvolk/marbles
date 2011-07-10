@@ -18,4 +18,6 @@ public interface IPageSession {
     IPage findPageByParentAndName(IPage parent, String name);
 
     List<IPage> getPagePath(IPage page);
+
+    boolean hasChildren(IPage page);
 }

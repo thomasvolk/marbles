@@ -23,4 +23,6 @@ public interface IPageService {
     List<IPage> getPagePath(IUser user, IPage page);
 
 	void removeAllPages(User user);
+
+	boolean hasChildren(IPage page);
 }

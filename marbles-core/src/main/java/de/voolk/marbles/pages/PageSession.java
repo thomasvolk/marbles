@@ -58,4 +58,9 @@ public class PageSession implements IPageSession {
     public List<IPage> getPagePath(IPage page) {
         return getPageService().getPagePath(getUser(), page);
     }
+
+	@Override
+	public boolean hasChildren(IPage page) {
+		return getPageService().hasChildren(page);
+	}
 }

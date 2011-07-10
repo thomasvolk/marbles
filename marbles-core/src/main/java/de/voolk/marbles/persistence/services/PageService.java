@@ -107,4 +107,11 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
 	public void removeAllPages(User user) {
 		remove(getRootPage(user));
 	}
+
+	@Override
+	public boolean hasChildren(IPage page) {
+		Query query = getEntityManager().createNamedQuery("page:hasChildren");
+        query.setParameter("parent", page);
+		return ((Number) query.getSingleResult()).intValue() > 0;
+	}
 }

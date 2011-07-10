@@ -41,4 +41,9 @@ public class MockPageSession implements IPageSession {
     public List<IPage> getPagePath(IPage page) {
         throw new UnsupportedOperationException("not implemented");
     }
+
+	@Override
+	public boolean hasChildren(IPage page) {
+		throw new UnsupportedOperationException("not implemented");
+	}
 }

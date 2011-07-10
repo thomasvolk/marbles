@@ -56,7 +56,8 @@ public class EditContentPage extends AbstractContentPage {
 
     @Override
     protected Component createSidebarPanel(String id) {
-        return new EditPageSidebarPanel(this, id, getMarblesPage(), getDisplayPageClass());
+        return new EditPageSidebarPanel(this, id, getMarblesPage(),
+        		getDisplayPageClass(), getPageSession());
     }
 
 }

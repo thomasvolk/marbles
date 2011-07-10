@@ -28,7 +28,9 @@ import de.voolk.marbles.api.beans.IPage;
         @NamedQuery(name = "page:byUserAndId",
         		query = "select object(p) from Page p where id = :id and user = :user"),
         @NamedQuery(name = "page:byUserAndParentAndName",
-               query = "select object(p) from Page p where parent = :parent and name = :name and user = :user")
+               query = "select object(p) from Page p where parent = :parent and name = :name and user = :user"),
+       @NamedQuery(name = "page:hasChildren",
+               query = "select count(p) from Page p where parent = :parent")
 })
 @Entity
 @Table(name = "page")
