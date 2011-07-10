@@ -11,7 +11,7 @@
   <artifactId>marbles-web</artifactId>
   <version>1.0</version>
   <packaging>war</packaging>
-  <name>web Maven Webapp</name>
+  <name>marbles-web</name>
   <url>http://maven.apache.org</url>
    <properties>
     <wicket.version>1.4.15</wicket.version>
@@ -57,7 +57,7 @@
             </exclusions>
             <type>jar</type>
         </dependency>
-        
+
          <!--  JETTY DEPENDENCIES FOR TESTING  -->
        <dependency>
            <groupId>org.mortbay.jetty</groupId>
@@ -77,9 +77,9 @@
            <version>${jetty.version}</version>
            <scope>test</scope>
        </dependency>
-    
+
   </dependencies>
-  
+
   <build>
     <finalName>marbles</finalName>
     <resources>
