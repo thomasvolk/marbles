@@ -4,5 +4,6 @@
     <entry key="actions">Actions</entry>
     <entry key="cancel">Cancel</entry>
     <entry key="delete">Delete Page</entry>
+    <entry key="move">Move Page</entry>
     <entry key="delete.confirmation">Do you really want to delete this page ?</entry>
 </properties>

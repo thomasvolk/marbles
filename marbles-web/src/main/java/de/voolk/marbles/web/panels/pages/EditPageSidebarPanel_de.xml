@@ -4,5 +4,6 @@
     <entry key="actions">Aktionen</entry>
     <entry key="cancel">Abbrechen</entry>
     <entry key="delete">Seite löschen</entry>
+    <entry key="move">Seite umhängen</entry>
     <entry key="delete.confirmation">Wollen Sie die Seite wirklich löschen ?</entry>
 </properties>
