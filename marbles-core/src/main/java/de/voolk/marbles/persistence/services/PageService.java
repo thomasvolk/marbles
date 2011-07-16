@@ -12,6 +12,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.beans.IUser;
+import de.voolk.marbles.api.pages.IPageTraversationHandler;
+import de.voolk.marbles.persistence.PageTraverser;
 import de.voolk.marbles.persistence.beans.Page;
 import de.voolk.marbles.persistence.beans.User;
 
@@ -113,5 +115,11 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
 		Query query = getEntityManager().createNamedQuery("page:hasChildren");
         query.setParameter("parent", page);
 		return ((Number) query.getSingleResult()).intValue() > 0;
+	}
+
+	public void traverse(IUser user, int pageId, IPageTraversationHandler handler) {
+		Page root = findPageByUserAndId(user, pageId);
+		PageTraverser traverser = new PageTraverser(handler);
+		traverser.traverse(root);
 	}
 }

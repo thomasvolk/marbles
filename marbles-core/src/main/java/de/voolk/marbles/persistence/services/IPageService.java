@@ -1,13 +1,13 @@
 package de.voolk.marbles.persistence.services;
 
-import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.api.beans.IUser;
-import de.voolk.marbles.persistence.beans.User;
-
 import java.util.List;
 
-public interface IPageService {
+import de.voolk.marbles.api.beans.IPage;
+import de.voolk.marbles.api.beans.IUser;
+import de.voolk.marbles.api.pages.IPageTraversationHandler;
+import de.voolk.marbles.persistence.beans.User;
 
+public interface IPageService {
     void updatePage(IUser user, int id, String content);
 
 	IPage findPageByUserAndId(IUser user, int id);
@@ -25,4 +25,6 @@ public interface IPageService {
 	void removeAllPages(User user);
 
 	boolean hasChildren(IPage page);
+
+	void traverse(IUser user, int pageId, IPageTraversationHandler handler);
 }

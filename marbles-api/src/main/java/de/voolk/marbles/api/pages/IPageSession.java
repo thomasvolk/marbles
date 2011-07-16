@@ -1,8 +1,8 @@
 package de.voolk.marbles.api.pages;
 
-import de.voolk.marbles.api.beans.IPage;
-
 import java.util.List;
+
+import de.voolk.marbles.api.beans.IPage;
 
 public interface IPageSession {
     IPage createPage(int parentPageId, String name, String content);
@@ -20,4 +20,6 @@ public interface IPageSession {
     List<IPage> getPagePath(IPage page);
 
     boolean hasChildren(IPage page);
+
+    void traverse(int pageId, IPageTraversationHandler handler);
 }

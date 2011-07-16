@@ -12,7 +12,7 @@ import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.web.pages.pages.DeleteContentPage;
 import de.voolk.marbles.web.pages.pages.EditContentPage;
-import de.voolk.marbles.web.pages.pages.SiteMapPage;
+import de.voolk.marbles.web.pages.pages.DisplaySiteMapPage;
 import de.voolk.marbles.web.panels.ReplacingConfirmationActionPanel;
 
 @SuppressWarnings({"serial", "rawtypes"})
@@ -34,7 +34,7 @@ public class EditPageSidebarPanel extends Panel {
             public void onClick() {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", marblesPage.getId());
-                setResponsePage(SiteMapPage.class, parameters);
+                setResponsePage(DisplaySiteMapPage.class, parameters);
             }
         });
         Link deleteLink = new Link("delete") {

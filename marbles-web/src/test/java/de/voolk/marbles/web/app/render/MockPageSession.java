@@ -3,6 +3,7 @@ package de.voolk.marbles.web.app.render;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
+import de.voolk.marbles.api.pages.IPageTraversationHandler;
 
 import java.util.List;
 
@@ -44,6 +45,11 @@ public class MockPageSession implements IPageSession {
 
 	@Override
 	public boolean hasChildren(IPage page) {
+		throw new UnsupportedOperationException("not implemented");
+	}
+
+	@Override
+	public void traverse(int pageId, IPageTraversationHandler handler) {
 		throw new UnsupportedOperationException("not implemented");
 	}
 }

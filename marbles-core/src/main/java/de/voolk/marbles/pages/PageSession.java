@@ -2,6 +2,7 @@ package de.voolk.marbles.pages;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
+import de.voolk.marbles.api.pages.IPageTraversationHandler;
 import de.voolk.marbles.persistence.beans.User;
 import de.voolk.marbles.persistence.services.IPageService;
 
@@ -62,5 +63,10 @@ public class PageSession implements IPageSession {
 	@Override
 	public boolean hasChildren(IPage page) {
 		return getPageService().hasChildren(page);
+	}
+
+	@Override
+	public void traverse(int pageId, IPageTraversationHandler handler) {
+		getPageService().traverse(getUser(), pageId, handler);
 	}
 }

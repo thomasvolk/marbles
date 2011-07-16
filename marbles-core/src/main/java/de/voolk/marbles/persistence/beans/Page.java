@@ -29,7 +29,7 @@ import de.voolk.marbles.api.beans.IPage;
         		query = "select object(p) from Page p where id = :id and user = :user"),
         @NamedQuery(name = "page:byUserAndParentAndName",
                query = "select object(p) from Page p where parent = :parent and name = :name and user = :user"),
-       @NamedQuery(name = "page:hasChildren",
+        @NamedQuery(name = "page:hasChildren",
                query = "select count(p) from Page p where parent = :parent")
 })
 @Entity
@@ -49,7 +49,7 @@ public class Page implements Serializable, IPage {
     @ManyToOne
     @JoinColumn(nullable=false)
     private User user;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, mappedBy="parent")
     private Collection<Page> children;
 
 	@Override
