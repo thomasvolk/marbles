@@ -5,6 +5,7 @@ import org.apache.wicket.markup.html.WebComponent;
 
 import de.voolk.marbles.web.pages.base.AbstractPage;
 
+// TODO implement this page
 public class ChangePasswordPage extends AbstractPage {
 	@Override
 	protected Component createSidebarPanel(String id) {
