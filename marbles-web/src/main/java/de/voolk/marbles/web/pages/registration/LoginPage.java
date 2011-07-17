@@ -6,8 +6,8 @@ import org.apache.wicket.markup.html.CSSPackageResource;
 import org.apache.wicket.markup.html.WebPage;
 
 import de.voolk.marbles.web.pages.base.AbstractPage;
-import de.voolk.marbles.web.panels.FooterPanel;
-import de.voolk.marbles.web.panels.HeaderPanel;
+import de.voolk.marbles.web.pages.base.panel.FooterPanel;
+import de.voolk.marbles.web.pages.base.panel.HeaderPanel;
 
 public class LoginPage extends WebPage {
     public LoginPage() {

@@ -2,7 +2,7 @@ package de.voolk.marbles.web.pages.content;
 
 import org.apache.wicket.PageParameters;
 
-import de.voolk.marbles.web.panels.SiteMapPanel;
+import de.voolk.marbles.web.pages.content.panel.SiteMapPanel;
 
 public class DisplaySiteMapPage extends AbstractContentPage {
 

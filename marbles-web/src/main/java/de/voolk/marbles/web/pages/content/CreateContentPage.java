@@ -9,7 +9,7 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.authorization.strategies.role.annotations.AuthorizeInstantiation;
 
 import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.web.panels.pages.EditPageSidebarPanel;
+import de.voolk.marbles.web.pages.content.sitebar.EditPageSidebarPanel;
 
 @AuthorizeInstantiation("user")
 public class CreateContentPage extends EditContentPage {

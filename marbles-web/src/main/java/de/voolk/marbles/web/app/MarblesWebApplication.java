@@ -7,7 +7,7 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.request.target.coding.QueryStringUrlCodingStrategy;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
-import de.voolk.marbles.web.HomePage;
+import de.voolk.marbles.web.pages.HomePage;
 import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
 import de.voolk.marbles.web.pages.content.CreateContentPage;
 import de.voolk.marbles.web.pages.content.DisplayContentPage;

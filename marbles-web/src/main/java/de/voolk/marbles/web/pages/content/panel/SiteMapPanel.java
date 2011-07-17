@@ -1,4 +1,4 @@
-package de.voolk.marbles.web.panels;
+package de.voolk.marbles.web.pages.content.panel;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -11,8 +11,8 @@ import org.apache.wicket.protocol.http.WebResponse;
 
 import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.pages.base.AbstractPage;
-import de.voolk.marbles.web.panels.FooterPanel;
-import de.voolk.marbles.web.panels.HeaderPanel;
+import de.voolk.marbles.web.pages.base.panel.FooterPanel;
+import de.voolk.marbles.web.pages.base.panel.HeaderPanel;
 
 public class LogoutPage extends SignOutPage {
     public LogoutPage() {

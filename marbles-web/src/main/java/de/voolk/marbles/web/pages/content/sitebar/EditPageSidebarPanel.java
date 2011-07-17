@@ -1,4 +1,4 @@
-package de.voolk.marbles.web.panels.pages;
+package de.voolk.marbles.web.pages.content.sitebar;
 
 import org.apache.wicket.Page;
 import org.apache.wicket.PageParameters;
@@ -10,10 +10,10 @@ import org.apache.wicket.util.value.ValueMap;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
+import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 import de.voolk.marbles.web.pages.content.DeleteContentPage;
 import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
 import de.voolk.marbles.web.pages.content.EditContentPage;
-import de.voolk.marbles.web.panels.ReplacingConfirmationActionPanel;
 
 @SuppressWarnings({"serial", "rawtypes"})
 public class EditPageSidebarPanel extends Panel {

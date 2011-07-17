@@ -35,9 +35,9 @@ import de.voolk.marbles.persistence.services.IAuthentificationService;
 import de.voolk.marbles.persistence.services.IPageService;
 import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.model.UserDataProvider;
+import de.voolk.marbles.web.pages.admin.auth.sitebar.AuthSidebarPanel;
 import de.voolk.marbles.web.pages.base.AbstractPage;
-import de.voolk.marbles.web.panels.ReplacingConfirmationActionPanel;
-import de.voolk.marbles.web.panels.admin.auth.AuthSidebarPanel;
+import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 
 @AuthorizeInstantiation("admin")
 public class ListUserPage extends AbstractPage {

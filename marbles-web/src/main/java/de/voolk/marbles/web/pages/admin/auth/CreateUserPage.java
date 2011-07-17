@@ -28,9 +28,9 @@ import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import de.voolk.marbles.persistence.services.IAuthentificationService;
+import de.voolk.marbles.web.pages.admin.auth.sitebar.AuthSidebarPanel;
 import de.voolk.marbles.web.pages.base.AbstractPage;
-import de.voolk.marbles.web.panels.admin.auth.AuthSidebarPanel;
-import de.voolk.marbles.web.panels.auth.SetPasswordPanel;
+import de.voolk.marbles.web.pages.profile.panel.SetPasswordPanel;
 
 @AuthorizeInstantiation("admin")
 public class CreateUserPage extends AbstractPage {

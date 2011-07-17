@@ -11,7 +11,7 @@ import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.model.ResourceModel;
 
-import de.voolk.marbles.web.panels.pages.EditPageSidebarPanel;
+import de.voolk.marbles.web.pages.content.sitebar.EditPageSidebarPanel;
 
 @AuthorizeInstantiation("user")
 public class EditContentPage extends AbstractContentPage {

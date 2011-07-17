@@ -5,7 +5,8 @@ import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.persistence.beans.User;
 import de.voolk.marbles.web.pages.base.AbstractPage;
-import de.voolk.marbles.web.panels.pages.BreadCrumbPanel;
+import de.voolk.marbles.web.pages.content.panel.BreadCrumbPanel;
+
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 

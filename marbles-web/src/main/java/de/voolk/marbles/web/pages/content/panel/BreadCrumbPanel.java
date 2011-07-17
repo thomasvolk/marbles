@@ -1,4 +1,4 @@
-package de.voolk.marbles.web.panels.pages;
+package de.voolk.marbles.web.pages.content.panel;
 
 
 import de.voolk.marbles.api.beans.IPage;

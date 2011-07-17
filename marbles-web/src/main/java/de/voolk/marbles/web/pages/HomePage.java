@@ -1,4 +1,4 @@
-package de.voolk.marbles.web;
+package de.voolk.marbles.web.pages;
 
 
 import de.voolk.marbles.web.pages.content.DisplayContentPage;
