@@ -1,6 +1,5 @@
 package de.voolk.marbles.web.pages.content;
 
-
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.WebPage;
@@ -20,11 +19,9 @@ public class DeleteContentPage extends WebPage {
 
     public DeleteContentPage(PageParameters parameters) {
         super(parameters);
-        IPageSession pageSession = pageRepository.createSession(getIdentSession().getUser());
-        IPage marblesPage = getMarblesPage();
-        pageSession.removePage(getMarblesPageId());
+        getPageSession().removePage(getMarblesPageId());
         PageParameters displayParams = new PageParameters();
-        parameters.put("id", marblesPage.getParent());
+        parameters.put("id", getMarblesPage().getParent());
         setResponsePage(DisplayContentPage.class, displayParams);
     }
 
@@ -45,10 +42,7 @@ public class DeleteContentPage extends WebPage {
 
     protected IPage getMarblesPage() {
         if(page == null) {
-            if(getMarblesPageId() == null) {
-                page = getPageSession().getRootPage();
-            }
-            else {
+            if(getMarblesPageId() != null) {
                 page = getPageSession().findPageById(getMarblesPageId());
             }
         }
