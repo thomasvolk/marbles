@@ -12,7 +12,6 @@ import de.voolk.marbles.web.app.render.WebPageRenderer;
 import de.voolk.marbles.web.pages.content.sidebar.DisplayPageSidebarPanel;
 
 @AuthorizeInstantiation("user")
-@SuppressWarnings("serial")
 public class DisplayContentPage extends AbstractContentPage {
     private transient IPageRenderer pageRenderer;
 

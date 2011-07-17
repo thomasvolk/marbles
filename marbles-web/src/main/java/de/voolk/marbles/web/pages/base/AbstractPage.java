@@ -70,9 +70,7 @@ public abstract class AbstractPage extends WebPage {
         return menuPanel;
     }
 
-    protected Component createSidebarPanel(String id) {
-        return new WebComponent(id);
-    }
+    protected abstract Component createSidebarPanel(String id);
 
     protected String getLogin() {
         return getIdentSession().getLogin();
