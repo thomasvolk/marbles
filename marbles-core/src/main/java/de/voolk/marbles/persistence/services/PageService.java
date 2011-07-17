@@ -68,6 +68,7 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
         }
         catch (NoResultException e) {
             Page page = new Page();
+            page.setName("ROOT");
             page.setContent("This is the ROOT Page please edit ...");
             page.setUser(resolve(User.class, user));
             persist(page);

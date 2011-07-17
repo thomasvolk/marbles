@@ -42,9 +42,6 @@ public class BreadCrumbPanel extends Panel {
                 parameters.put("id", page.getId());
                 Link link = new BookmarkablePageLink("link",
                 		getDisplayPageClass(), parameters);
-                if(page.isRoot()) {
-                    name = new StringResourceModel("root", null);
-                }
                 link.add(new Label("name", name));
                 String sep;
                 if(page.isRoot()) {
