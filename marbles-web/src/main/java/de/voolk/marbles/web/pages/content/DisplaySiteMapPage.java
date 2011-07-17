@@ -1,4 +1,4 @@
-package de.voolk.marbles.web.pages.pages;
+package de.voolk.marbles.web.pages.content;
 
 import org.apache.wicket.PageParameters;
 

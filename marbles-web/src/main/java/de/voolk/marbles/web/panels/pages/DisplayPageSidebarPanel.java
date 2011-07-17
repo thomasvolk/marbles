@@ -4,7 +4,7 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 
-import de.voolk.marbles.web.pages.pages.EditContentPage;
+import de.voolk.marbles.web.pages.content.EditContentPage;
 
 @SuppressWarnings({"serial", "rawtypes"})
 public class DisplayPageSidebarPanel extends Panel {

@@ -14,7 +14,7 @@ import org.apache.wicket.model.StringResourceModel;
 import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.app.MarblesWebApplication;
 import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
-import de.voolk.marbles.web.pages.pages.DisplayContentPage;
+import de.voolk.marbles.web.pages.content.DisplayContentPage;
 import de.voolk.marbles.web.pages.registration.LogoutPage;
 import de.voolk.marbles.web.panels.FooterPanel;
 import de.voolk.marbles.web.panels.HeaderPanel;

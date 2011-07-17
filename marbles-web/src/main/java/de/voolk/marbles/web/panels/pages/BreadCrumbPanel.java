@@ -3,7 +3,7 @@ package de.voolk.marbles.web.panels.pages;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.persistence.services.IPageService;
-import de.voolk.marbles.web.pages.pages.DisplayContentPage;
+import de.voolk.marbles.web.pages.content.DisplayContentPage;
 
 import org.apache.wicket.Page;
 import org.apache.wicket.PageParameters;

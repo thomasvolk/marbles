@@ -10,9 +10,9 @@ import org.apache.wicket.util.value.ValueMap;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
-import de.voolk.marbles.web.pages.pages.DeleteContentPage;
-import de.voolk.marbles.web.pages.pages.EditContentPage;
-import de.voolk.marbles.web.pages.pages.DisplaySiteMapPage;
+import de.voolk.marbles.web.pages.content.DeleteContentPage;
+import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
+import de.voolk.marbles.web.pages.content.EditContentPage;
 import de.voolk.marbles.web.panels.ReplacingConfirmationActionPanel;
 
 @SuppressWarnings({"serial", "rawtypes"})

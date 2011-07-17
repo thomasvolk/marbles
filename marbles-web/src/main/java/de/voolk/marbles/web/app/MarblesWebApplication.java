@@ -9,9 +9,9 @@ import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
 import de.voolk.marbles.web.HomePage;
 import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
-import de.voolk.marbles.web.pages.pages.CreateContentPage;
-import de.voolk.marbles.web.pages.pages.DisplayContentPage;
-import de.voolk.marbles.web.pages.pages.EditContentPage;
+import de.voolk.marbles.web.pages.content.CreateContentPage;
+import de.voolk.marbles.web.pages.content.DisplayContentPage;
+import de.voolk.marbles.web.pages.content.EditContentPage;
 import de.voolk.marbles.web.pages.registration.LoginPage;
 
 public class MarblesWebApplication extends AuthenticatedWebApplication {
