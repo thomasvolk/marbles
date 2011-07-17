@@ -29,7 +29,7 @@ public class EditPageSidebarPanel extends Panel {
                 setResponsePage(redirectPage, parameters);
             }
         });
-        add(new Link("move") {
+        add(new Link("sitemap") {
             @Override
             public void onClick() {
                 PageParameters parameters = new PageParameters();
