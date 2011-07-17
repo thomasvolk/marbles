@@ -1,4 +1,4 @@
-package de.voolk.marbles.web.pages.admin.auth.sitebar;
+package de.voolk.marbles.web.pages.admin.auth.sidebar;
 
 import de.voolk.marbles.web.pages.admin.auth.CreateUserPage;
 import de.voolk.marbles.web.pages.admin.auth.ListUserPage;

@@ -28,7 +28,7 @@ import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import de.voolk.marbles.persistence.services.IAuthentificationService;
-import de.voolk.marbles.web.pages.admin.auth.sitebar.AuthSidebarPanel;
+import de.voolk.marbles.web.pages.admin.auth.sidebar.AuthSidebarPanel;
 import de.voolk.marbles.web.pages.base.AbstractPage;
 import de.voolk.marbles.web.pages.profile.panel.SetPasswordPanel;
 

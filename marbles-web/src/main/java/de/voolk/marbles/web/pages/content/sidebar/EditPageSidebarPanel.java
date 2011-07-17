@@ -1,4 +1,4 @@
-package de.voolk.marbles.web.pages.content.sitebar;
+package de.voolk.marbles.web.pages.content.sidebar;
 
 import org.apache.wicket.Page;
 import org.apache.wicket.PageParameters;

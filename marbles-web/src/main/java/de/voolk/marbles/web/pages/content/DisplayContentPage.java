@@ -9,7 +9,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import de.voolk.marbles.api.pages.render.IPageRenderer;
 import de.voolk.marbles.web.app.UrlResolver;
 import de.voolk.marbles.web.app.render.WebPageRenderer;
-import de.voolk.marbles.web.pages.content.sitebar.DisplayPageSidebarPanel;
+import de.voolk.marbles.web.pages.content.sidebar.DisplayPageSidebarPanel;
 
 @AuthorizeInstantiation("user")
 @SuppressWarnings("serial")
