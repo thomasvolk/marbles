@@ -3,7 +3,6 @@ package de.voolk.marbles.web.pages.content.sidebar;
 import org.apache.wicket.Page;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.StringResourceModel;
 import org.apache.wicket.util.value.ValueMap;
@@ -11,12 +10,13 @@ import org.apache.wicket.util.value.ValueMap;
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
+import de.voolk.marbles.web.pages.content.AbstractSidebarPanel;
 import de.voolk.marbles.web.pages.content.DeleteContentPage;
 import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
 import de.voolk.marbles.web.pages.content.EditContentPage;
 
 @SuppressWarnings({"serial", "rawtypes"})
-public class EditPageSidebarPanel extends Panel {
+public class EditPageSidebarPanel extends AbstractSidebarPanel {
     public EditPageSidebarPanel(final EditContentPage page, String id, final IPage marblesPage,
     		final Class<? extends Page> redirectPage, IPageSession pageSession) {
         super(id);
