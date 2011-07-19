@@ -58,9 +58,13 @@ public abstract class AbstractPage extends WebPage {
         add(new BookmarkablePageLink<String>("logout", getLogoutPage()));
         add(new Label("userName", getLogin()));
         add(createMenuPanel());
+        postInit();
     }
 
-    private MenuPanel createMenuPanel() {
+    protected void postInit() {
+	}
+
+	private MenuPanel createMenuPanel() {
         MenuPanel menuPanel = new MenuPanel("menu");
         menuPanel.addItem(new StringResourceModel("home", this, null), DisplayContentPage.class);
         if(getIdentSession().isAdmin()) {

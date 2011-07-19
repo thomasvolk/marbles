@@ -5,12 +5,14 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.model.StringResourceModel;
 import org.apache.wicket.util.value.ValueMap;
 
+import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
 import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
+import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;
 
 @SuppressWarnings({ "rawtypes", "serial" })
-public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel {
+public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel implements ISiteMapListener {
 	private static final long serialVersionUID = 1L;
 	private Link deleteLink;
 
@@ -34,7 +36,8 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel {
         add(deleteLink);
 	}
 
-	public void selectPage(Integer id) {
+	@Override
+	public void pageSelected(IPage page) {
 		deleteLink.setEnabled(true);
 	}
 }
