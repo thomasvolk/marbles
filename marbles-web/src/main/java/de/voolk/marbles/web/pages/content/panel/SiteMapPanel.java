@@ -11,6 +11,7 @@ import javax.swing.tree.TreeNode;
 import org.apache.wicket.extensions.markup.html.tree.Tree;
 import org.apache.wicket.extensions.markup.html.tree.DefaultAbstractTree.LinkType;
 import org.apache.wicket.markup.html.panel.Panel;
+import org.apache.wicket.markup.html.tree.ITreeStateListener;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
@@ -37,7 +38,31 @@ public class SiteMapPanel extends Panel implements IPageTraversationHandler {
             }
         };
         tree.setLinkType(LinkType.REGULAR);
+        tree.getTreeState().addTreeStateListener(new ITreeStateListener() {
+			@Override
+			public void nodeUnselected(Object arg0) {
+			}
 
+			@Override
+			public void nodeSelected(Object arg0) {
+			}
+
+			@Override
+			public void nodeExpanded(Object arg0) {
+			}
+
+			@Override
+			public void nodeCollapsed(Object arg0) {
+			}
+
+			@Override
+			public void allNodesExpanded() {
+			}
+
+			@Override
+			public void allNodesCollapsed() {
+			}
+		});
         add(tree);
 	}
 

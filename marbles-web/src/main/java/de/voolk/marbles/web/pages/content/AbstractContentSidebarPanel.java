@@ -1,6 +1,5 @@
 package de.voolk.marbles.web.pages.content;
 
-import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.IModel;
 
 import de.voolk.marbles.web.pages.base.AbstractSidebarPanel;
