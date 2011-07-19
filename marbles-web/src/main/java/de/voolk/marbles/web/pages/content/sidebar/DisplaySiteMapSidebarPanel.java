@@ -6,11 +6,11 @@ import org.apache.wicket.model.StringResourceModel;
 import org.apache.wicket.util.value.ValueMap;
 
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
-import de.voolk.marbles.web.pages.content.AbstractSidebarPanel;
+import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
 import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
 
 @SuppressWarnings({ "rawtypes", "serial" })
-public class DisplaySiteMapSidebarPanel extends AbstractSidebarPanel {
+public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel {
 	private static final long serialVersionUID = 1L;
 	private Link deleteLink;
 

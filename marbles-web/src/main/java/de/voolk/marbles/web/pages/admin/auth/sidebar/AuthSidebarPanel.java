@@ -1,12 +1,13 @@
 package de.voolk.marbles.web.pages.admin.auth.sidebar;
 
+import org.apache.wicket.markup.html.link.Link;
+
 import de.voolk.marbles.web.pages.admin.auth.CreateUserPage;
 import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
-import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.markup.html.panel.Panel;
+import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
 
 @SuppressWarnings({"serial", "rawtypes"})
-public class AuthSidebarPanel extends Panel {
+public class AuthSidebarPanel extends AbstractContentSidebarPanel {
     public AuthSidebarPanel(String id) {
         super(id);
         add(new Link("createUser") {
