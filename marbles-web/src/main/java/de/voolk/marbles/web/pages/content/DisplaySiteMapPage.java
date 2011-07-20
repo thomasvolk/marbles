@@ -33,7 +33,7 @@ public class DisplaySiteMapPage extends AbstractContentPage {
 
 	@Override
 	protected Component createSidebarPanel(String id) {
-		displaySiteMapSidebarPanel = new DisplaySiteMapSidebarPanel(id, this);
+		displaySiteMapSidebarPanel = new DisplaySiteMapSidebarPanel(id, getMarblesPageId(), this);
 		return displaySiteMapSidebarPanel;
 	}
 

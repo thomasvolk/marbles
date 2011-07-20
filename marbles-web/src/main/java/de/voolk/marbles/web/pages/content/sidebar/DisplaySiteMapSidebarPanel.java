@@ -1,5 +1,6 @@
 package de.voolk.marbles.web.pages.content.sidebar;
 
+import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.StringResourceModel;
@@ -23,7 +24,7 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
 	private Link deleteLink;
 	private IPage selectedPage;
 
-	public DisplaySiteMapSidebarPanel(String id, final DisplaySiteMapPage page) {
+	public DisplaySiteMapSidebarPanel(String id, final int rootPageId, final DisplaySiteMapPage page) {
 		super(id);
 		deleteLink = new Link("delete") {
 			@Override
@@ -35,6 +36,8 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
                     public void execute() {
                     	IPageSession session = pageRepository.createSession(getIdentSession().getUser());
                         session.removePage(selectedPage.getId());
+                        PageParameters parameters = new PageParameters();
+                        parameters.put("id", rootPageId);
                     	setResponsePage(DisplaySiteMapPage.class);
                     }
                 };
