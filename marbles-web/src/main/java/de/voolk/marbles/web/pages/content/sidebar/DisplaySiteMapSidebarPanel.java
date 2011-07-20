@@ -38,7 +38,7 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
                         session.removePage(selectedPage.getId());
                         PageParameters parameters = new PageParameters();
                         parameters.put("id", rootPageId);
-                    	setResponsePage(DisplaySiteMapPage.class);
+                    	setResponsePage(DisplaySiteMapPage.class, parameters);
                     }
                 };
             }
