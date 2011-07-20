@@ -42,8 +42,6 @@ public class EditContentPage extends AbstractContentPage {
 		return action;
 	}
 
-
-
 	protected Class<? extends Page> getDisplayPageClass() {
 		return DisplayContentPage.class;
 	}
@@ -57,7 +55,7 @@ public class EditContentPage extends AbstractContentPage {
     @Override
     protected Component createSidebarPanel(String id) {
         return new EditPageSidebarPanel(this, id, getMarblesPage(),
-        		getDisplayPageClass(), getPageSession());
+        		getDisplayPageClass());
     }
 
 }

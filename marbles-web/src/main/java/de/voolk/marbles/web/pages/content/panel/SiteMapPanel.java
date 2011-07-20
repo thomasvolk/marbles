@@ -13,10 +13,13 @@ import org.apache.wicket.extensions.markup.html.tree.DefaultAbstractTree.LinkTyp
 import org.apache.wicket.extensions.markup.html.tree.Tree;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.markup.html.tree.ITreeStateListener;
+import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.api.pages.IPageTraversationHandler;
+import de.voolk.marbles.pages.IPageRepository;
+import de.voolk.marbles.web.app.IdentSession;
 
 public class SiteMapPanel extends Panel implements IPageTraversationHandler {
 	public interface ISiteMapListener {
@@ -82,9 +85,12 @@ public class SiteMapPanel extends Panel implements IPageTraversationHandler {
 	private static final long serialVersionUID = 1L;
 	private DefaultMutableTreeNode rootNode;
 	private Map<Integer, DefaultMutableTreeNode> nodes;
+	@SpringBean
+    private IPageRepository pageRepository;
 
-	public SiteMapPanel(String id, IPageSession pageSession, int rootPageId, ISiteMapListener listener) {
+	public SiteMapPanel(String id, int rootPageId, ISiteMapListener listener) {
 		super(id);
+		IPageSession pageSession = pageRepository.createSession(getIdentSession().getUser());
 		pageSession.traverse(rootPageId, this);
         TreeModel treeModel = new DefaultTreeModel(rootNode);
 
@@ -121,4 +127,8 @@ public class SiteMapPanel extends Panel implements IPageTraversationHandler {
 			getNodes().get(parent.getId()).add(node);
 		}
 	}
+
+	protected IdentSession getIdentSession() {
+        return ((IdentSession) getSession());
+    }
 }

@@ -20,7 +20,7 @@ public class DisplaySiteMapPage extends AbstractContentPage {
 	@Override
 	protected void postInit() {
 		super.postInit();
-		SiteMapPanel tree = new SiteMapPanel("tree", getPageSession(), getMarblesPageId(),
+		SiteMapPanel tree = new SiteMapPanel("tree", getMarblesPageId(),
 				displaySiteMapSidebarPanel);
         add(tree);
 	}
