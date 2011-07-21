@@ -14,41 +14,33 @@ import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
 import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
+import de.voolk.marbles.web.pages.content.MoveContentPage;
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;
 
 @SuppressWarnings({ "rawtypes", "serial" })
-public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel implements ISiteMapListener {
+public class MoveContentSidebar extends AbstractContentSidebarPanel implements ISiteMapListener {
 	private static final long serialVersionUID = 1L;
 	@SpringBean
     private IPageRepository pageRepository;
-	private Link deleteLink;
+	private Link moveLink;
 	private IPage selectedPage;
 	private int rootPageId;
 
-	public DisplaySiteMapSidebarPanel(String id, final int rootPageId, final DisplaySiteMapPage page) {
+	public MoveContentSidebar(String id, final int rootPageId, final MoveContentPage page) {
 		super(id);
 		this.rootPageId = rootPageId;
-		deleteLink = new Link("delete") {
+		moveLink = new Link("move") {
 			@Override
 			 public void onClick() {
-            	new ReplacingConfirmationActionPanel(page.getAction(),
-                        new StringResourceModel("delete.page.confirmation",
-                        		DisplaySiteMapSidebarPanel.this, new Model<ValueMap>())) {
-                    @Override
-                    public void execute() {
-                    	IPageSession session = pageRepository.createSession(getIdentSession().getUser());
-                    	if(!selectedPage.isRoot()) {
-                    		session.removePage(selectedPage.getId());
-                    	}
-                        PageParameters parameters = new PageParameters();
-                        parameters.put("id", rootPageId);
-                    	setResponsePage(DisplaySiteMapPage.class, parameters);
-                    }
-                };
+            	IPageSession session = pageRepository.createSession(getIdentSession().getUser());
+            	if(!selectedPage.getId().equals(rootPageId)) {
+            		// TODO ...
+            	}
+            	setResponsePage(MoveContentPage.class);
             }
         };
-        deleteLink.setEnabled(false);
-        add(deleteLink);
+        moveLink.setEnabled(false);
+        add(moveLink);
 	}
 
 
@@ -60,11 +52,11 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
 	@Override
 	public void pageSelected(IPage page) {
 		IPageSession session = pageRepository.createSession(getIdentSession().getUser());
-		if(page.isRoot() || page.getId().equals(getRootPageId()) || session.hasChildren(page)) {
-			deleteLink.setEnabled(false);
+		if(page.getId().equals(getRootPageId())) {
+			moveLink.setEnabled(false);
 		}
 		else {
-			deleteLink.setEnabled(true);
+			moveLink.setEnabled(true);
 		}
 		selectedPage = page;
 	}

@@ -17,6 +17,7 @@ import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
 import de.voolk.marbles.web.pages.content.DeleteContentPage;
 import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
 import de.voolk.marbles.web.pages.content.EditContentPage;
+import de.voolk.marbles.web.pages.content.MoveContentPage;
 
 @SuppressWarnings({"serial", "rawtypes"})
 public class EditPageSidebarPanel extends AbstractContentSidebarPanel {
@@ -57,6 +58,14 @@ public class EditPageSidebarPanel extends AbstractContentSidebarPanel {
                 };
             }
         };
+        add(new Link("move") {
+            @Override
+            public void onClick() {
+                PageParameters parameters = new PageParameters();
+                parameters.put("id", marblesPage.getId());
+                setResponsePage(MoveContentPage.class, parameters);
+            }
+        });
 
         IPageSession session = pageRepository.createSession(getIdentSession().getUser());
         if(marblesPage.isRoot() || session.hasChildren(marblesPage)) {
