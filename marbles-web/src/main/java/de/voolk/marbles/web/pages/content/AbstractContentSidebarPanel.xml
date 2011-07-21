@@ -3,6 +3,8 @@
 <properties>
     <entry key="actions">Actions</entry>
     <entry key="cancel">Cancel</entry>
-    <entry key="delete.page">Delete Page</entry>
+    <entry key="open.page">Open page</entry>
+    <entry key="delete.page">Delete page</entry>
+    <entry key="move.page">Move</entry>
     <entry key="delete.page.confirmation">Do you really want to delete this page ?</entry>
 </properties>

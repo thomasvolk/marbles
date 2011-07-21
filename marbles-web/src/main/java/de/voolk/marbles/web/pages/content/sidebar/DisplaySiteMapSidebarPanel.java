@@ -13,7 +13,9 @@ import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
+import de.voolk.marbles.web.pages.content.DisplayContentPage;
 import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
+import de.voolk.marbles.web.pages.content.MoveContentPage;
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;
 
 @SuppressWarnings({ "rawtypes", "serial" })
@@ -22,8 +24,10 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
 	@SpringBean
     private IPageRepository pageRepository;
 	private Link deleteLink;
+	private Link openLink;
 	private IPage selectedPage;
 	private int rootPageId;
+	private Link moveLink;
 
 	public DisplaySiteMapSidebarPanel(String id, final int rootPageId, final DisplaySiteMapPage page) {
 		super(id);
@@ -47,8 +51,28 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
                 };
             }
         };
+        openLink = new Link("open") {
+			@Override
+			 public void onClick() {
+                PageParameters parameters = new PageParameters();
+                parameters.put("id", selectedPage.getId());
+            	setResponsePage(DisplayContentPage.class, parameters);
+            }
+        };
+        moveLink = new Link("move") {
+            @Override
+            public void onClick() {
+                PageParameters parameters = new PageParameters();
+                parameters.put("id", selectedPage.getId());
+                setResponsePage(MoveContentPage.class, parameters);
+            }
+        };
         deleteLink.setEnabled(false);
+        openLink.setEnabled(false);
+        moveLink.setEnabled(false);
         add(deleteLink);
+        add(openLink);
+        add(moveLink);
 	}
 
 
@@ -60,6 +84,10 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
 	@Override
 	public void pageSelected(IPage page) {
 		IPageSession session = pageRepository.createSession(getIdentSession().getUser());
+		openLink.setEnabled(true);
+		if(!page.isRoot()) {
+			moveLink.setEnabled(true);
+		}
 		if(page.isRoot() || page.getId().equals(getRootPageId()) || session.hasChildren(page)) {
 			deleteLink.setEnabled(false);
 		}

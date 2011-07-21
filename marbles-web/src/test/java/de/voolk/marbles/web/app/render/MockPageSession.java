@@ -52,4 +52,9 @@ public class MockPageSession implements IPageSession {
 	public void traverse(int pageId, IPageTraversationHandler handler) {
 		throw new UnsupportedOperationException("not implemented");
 	}
+
+	@Override
+	public void movePageTo(int sourcePageId, int targetPageId) {
+		throw new UnsupportedOperationException("not implemented");
+	}
 }

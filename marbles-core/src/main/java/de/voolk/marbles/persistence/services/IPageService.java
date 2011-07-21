@@ -27,4 +27,6 @@ public interface IPageService {
 	boolean hasChildren(IPage page);
 
 	void traverse(IUser user, int pageId, IPageTraversationHandler handler);
+
+	void movePageTo(User user, int sourcePageId, int targetPageId);
 }

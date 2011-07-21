@@ -34,7 +34,7 @@ public class MoveContentSidebar extends AbstractContentSidebarPanel implements I
 			 public void onClick() {
             	IPageSession session = pageRepository.createSession(getIdentSession().getUser());
             	if(!selectedPage.getId().equals(rootPageId)) {
-            		// TODO ...
+            		session.movePageTo(rootPageId, selectedPage.getId());
             	}
             	setResponsePage(MoveContentPage.class);
             }

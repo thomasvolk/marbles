@@ -3,6 +3,8 @@
 <properties>
     <entry key="actions">Aktionen</entry>
     <entry key="cancel">Abbrechen</entry>
+    <entry key="open.page">Seite öffnen</entry>
+    <entry key="move.page">Seite verschieben</entry>
     <entry key="delete.page">Seite löschen</entry>
     <entry key="delete.page.confirmation">Wollen Sie die Seite wirklich löschen ?</entry>
 </properties>

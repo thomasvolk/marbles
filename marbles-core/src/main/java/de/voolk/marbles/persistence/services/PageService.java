@@ -56,7 +56,8 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
 
     @Override
     public void removePage(IUser user, int id) {
-        remove(findPageByUserAndId(user, id));
+        Page page = findPageByUserAndId(user, id);
+		remove(page);
     }
 
     @Override
@@ -122,5 +123,18 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
 		Page root = findPageByUserAndId(user, pageId);
 		PageTraverser traverser = new PageTraverser(handler);
 		traverser.traverse(root);
+	}
+
+	@Override
+	public void movePageTo(User user, int sourcePageId, int targetPageId) {
+		Page source = findPageByUserAndId(user, sourcePageId);
+		if(source.isRoot()) {
+			throw new IllegalStateException("root page can't be moved");
+		}
+		Page target = findPageByUserAndId(user, targetPageId);
+		target.getChildren().add(source);
+		source.setParent(target);
+		persist(source);
+		persist(target);
 	}
 }

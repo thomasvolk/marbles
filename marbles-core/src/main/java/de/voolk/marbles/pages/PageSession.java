@@ -69,4 +69,9 @@ public class PageSession implements IPageSession {
 	public void traverse(int pageId, IPageTraversationHandler handler) {
 		getPageService().traverse(getUser(), pageId, handler);
 	}
+
+	@Override
+	public void movePageTo(int sourcePageId, int targetPageId) {
+		getPageService().movePageTo(getUser(), sourcePageId, targetPageId);
+	}
 }
