@@ -6,5 +6,6 @@
     <entry key="open.page">Open page</entry>
     <entry key="delete.page">Delete page</entry>
     <entry key="move.page">Move</entry>
+    <entry key="move.page.confirm">Move page</entry>
     <entry key="delete.page.confirmation">Do you really want to delete this page ?</entry>
 </properties>

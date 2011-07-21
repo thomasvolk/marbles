@@ -58,15 +58,19 @@ public class EditPageSidebarPanel extends AbstractContentSidebarPanel {
                 };
             }
         };
-        add(new Link("move") {
+        Link moveLink = new Link("move") {
             @Override
             public void onClick() {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", marblesPage.getId());
                 setResponsePage(MoveContentPage.class, parameters);
             }
-        });
+        };
+		add(moveLink);
 
+		if(marblesPage.isRoot()) {
+			moveLink.setEnabled(false);
+		}
         IPageSession session = pageRepository.createSession(getIdentSession().getUser());
         if(marblesPage.isRoot() || session.hasChildren(marblesPage)) {
         	deleteLink.setEnabled(false);

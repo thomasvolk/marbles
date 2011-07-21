@@ -2,18 +2,14 @@ package de.voolk.marbles.web.pages.content.sidebar;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.model.Model;
-import org.apache.wicket.model.StringResourceModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import org.apache.wicket.util.value.ValueMap;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
-import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
-import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
+import de.voolk.marbles.web.pages.content.DisplayContentPage;
 import de.voolk.marbles.web.pages.content.MoveContentPage;
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;
 
@@ -36,7 +32,9 @@ public class MoveContentSidebar extends AbstractContentSidebarPanel implements I
             	if(!selectedPage.getId().equals(rootPageId)) {
             		session.movePageTo(rootPageId, selectedPage.getId());
             	}
-            	setResponsePage(MoveContentPage.class);
+            	PageParameters parameters = new PageParameters();
+                parameters.put("id", selectedPage.getId());
+            	setResponsePage(DisplayContentPage.class, parameters);
             }
         };
         moveLink.setEnabled(false);
@@ -51,7 +49,6 @@ public class MoveContentSidebar extends AbstractContentSidebarPanel implements I
 
 	@Override
 	public void pageSelected(IPage page) {
-		IPageSession session = pageRepository.createSession(getIdentSession().getUser());
 		if(page.getId().equals(getRootPageId())) {
 			moveLink.setEnabled(false);
 		}
