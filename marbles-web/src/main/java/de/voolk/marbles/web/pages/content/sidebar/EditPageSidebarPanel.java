@@ -15,7 +15,6 @@ import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
 import de.voolk.marbles.web.pages.content.DeleteContentPage;
-import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
 import de.voolk.marbles.web.pages.content.EditContentPage;
 import de.voolk.marbles.web.pages.content.MoveContentPage;
 
@@ -33,14 +32,6 @@ public class EditPageSidebarPanel extends AbstractContentSidebarPanel {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", marblesPage.getId());
                 setResponsePage(redirectPage, parameters);
-            }
-        });
-        add(new Link("sitemap") {
-            @Override
-            public void onClick() {
-                PageParameters parameters = new PageParameters();
-                parameters.put("id", marblesPage.getId());
-                setResponsePage(DisplaySiteMapPage.class, parameters);
             }
         });
         Link deleteLink = new Link("delete") {
