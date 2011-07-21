@@ -19,10 +19,17 @@ public class DeleteContentPage extends WebPage {
 
     public DeleteContentPage(PageParameters parameters) {
         super(parameters);
-        getPageSession().removePage(getMarblesPageId());
-        PageParameters displayParams = new PageParameters();
-        parameters.put("id", getMarblesPage().getParent());
-        setResponsePage(DisplayContentPage.class, displayParams);
+        IPage marblesPage = getMarblesPage();
+        if(marblesPage.isRoot()) {
+        	throw new IllegalStateException("can not delete root page!");
+        }
+        else {
+	        Integer parentId = marblesPage.getParent().getId();
+	        getPageSession().removePage(marblesPage.getId());
+	        PageParameters displayParams = new PageParameters();
+			parameters.put("id", parentId);
+			setResponsePage(DisplayContentPage.class, displayParams);
+        }
     }
 
     protected IPageSession getPageSession() {
