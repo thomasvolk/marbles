@@ -34,6 +34,9 @@ public class PageRenderer implements IPageRenderer {
     @Override
     public String toHtml(IPage page) {
         String content = page.getContent();
+        if(content == null) {
+        	content = "";
+        }
         for(IContentFilter filter: getContentFilters()) {
             content = filter.filter(content);
         }
@@ -47,7 +50,7 @@ public class PageRenderer implements IPageRenderer {
             StringBuffer result = new StringBuffer();
 
             while(matcher.find()) {
-                String pageName = content.substring(matcher.start() + 
+                String pageName = content.substring(matcher.start() +
                 		PAGE_PREFIX.length(), matcher.end());
                 matcher.appendReplacement(result,
                         getLinkResolver().renderPageLink(parentPage, pageName));
