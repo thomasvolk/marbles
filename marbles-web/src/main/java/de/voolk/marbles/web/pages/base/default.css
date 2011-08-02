@@ -148,7 +148,7 @@ a:hover {
 #breadcrumb {
     padding: 0px 0px 0px 0px;
     margin: 0 auto;
-    width: 520px;
+    width: 560px;
 	height: 20px;
 	font-size: 10px;
 	background-color: #FFFFFF;
@@ -202,7 +202,7 @@ a:hover {
 
 #content {
 	float: left;
-	width: 520px;
+	width: 560px;
 	padding: 0px 0px 0px 0px;
 }
 
@@ -211,7 +211,7 @@ a:hover {
 
 #sidebar {
 	float: right;
-	width: 180px;
+	width: 160px;
 	padding: 0px;
 	color: #000000;
 	background-color: #F1F1F1;
@@ -371,7 +371,7 @@ div.confirmationBox a {
 
 #pageContent {
 	height: 255px;
-    width: 520px;
+    width: 540px;
 }
 
 a.arrow {
