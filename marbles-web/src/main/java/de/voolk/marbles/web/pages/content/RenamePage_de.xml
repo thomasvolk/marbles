@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+   <entry key="save">Speichern</entry>
+   <entry key="pagename.not.unique">Der Seitename ist auf diese Unterseite schon vergeben</entry>
+</properties>

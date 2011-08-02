@@ -1,0 +1,63 @@
+<html xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd" >
+   <head>
+        <title>Admin</title>
+        <link rel="stylesheet" type="text/css" href="../base/default.css" />
+    </head>
+
+    <body>
+
+
+
+<div id="wrapper">
+        <div id="header" wicket:id="header">
+            <div id="logo">
+                <h1><a href="#">Marbles   </a></h1>
+                <p> by <a href="http://my-volk.de/">Thomas Volk</a></p>
+            </div>
+        </div>
+        <!-- end #header -->
+        <div id="menu">
+            <ul>
+            <li><a>Home</a></li>
+            <li><a>Test</a></li>
+            </ul>
+        </div>
+        <!-- end #menu -->
+        <div id="page">
+        <div id="page-bgtop">
+        <div id="page-bgbtm">
+            <div id="content">
+
+
+
+         <wicket:extend>
+            <div wicket:id="breadcrumb"></div>
+            <div wicket:id="feedback"></div>
+            <form wicket:id="renameForm">
+                <input type="text" wicket:id="pageName"/>
+                <div class="buttons">
+                    <input type="submit" wicket:id="save"/>
+                </div>
+            </form>
+		</wicket:extend>
+
+
+
+
+                <div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar"></div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	</div>
+	</div>
+	<!-- end #page -->
+</div>
+	<div id="footer" >
+		<p>Copyright (c) 2011 by <a href="http://my-volk.de/">Thomas Volk</a>.</p>
+	</div>
+	<!-- end #footer -->
+    </body>
+</html>

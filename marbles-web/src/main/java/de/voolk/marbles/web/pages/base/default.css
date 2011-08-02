@@ -46,7 +46,7 @@ a:hover {
 }
 
 #wrapper {
-	width: 960px;
+	width: 760px;
 	margin: 0 auto;
 	padding: 0;
 }
@@ -54,7 +54,7 @@ a:hover {
 /* Header */
 
 #header {
-	width: 940px;
+	width: 740px;
 	height: 148px;
 	margin: 0 auto;
 }
@@ -106,7 +106,7 @@ a:hover {
 /* Menu */
 
 #menu {
-	width: 940px;
+	width: 740px;
 	height: 36px;
 	margin: 0 auto;
 	padding: 0;
@@ -148,7 +148,7 @@ a:hover {
 #breadcrumb {
     padding: 0px 0px 0px 0px;
     margin: 0 auto;
-    width: 720px;
+    width: 520px;
 	height: 20px;
 	font-size: 10px;
 	background-color: #FFFFFF;
@@ -193,16 +193,16 @@ a:hover {
 /* Page */
 
 #page {
-	width: 940px;
+	width: 740px;
 	margin: 0 auto;
-	padding: 0;
+	padding: 0 10px;
 }
 
 /* Content */
 
 #content {
 	float: left;
-	width: 720px;
+	width: 520px;
 	padding: 0px 0px 0px 0px;
 }
 
@@ -277,7 +277,7 @@ a:hover {
 /* Footer */
 
 #footer {
-	width: 940px;
+	width: 740px;
 	height: 50px;
 	margin: 0 auto;
 	padding: 0px 0 15px 0;
@@ -299,9 +299,9 @@ a:hover {
 }
 
 div.pageContent {
-    /*
     font-family: monospace;
-    */
+
+    padding: 0 10px;
 }
 
 div.pageContent a:hover, a:active {
