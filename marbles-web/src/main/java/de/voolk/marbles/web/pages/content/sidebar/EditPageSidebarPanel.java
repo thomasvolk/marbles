@@ -17,6 +17,7 @@ import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
 import de.voolk.marbles.web.pages.content.DeleteContentPage;
 import de.voolk.marbles.web.pages.content.EditContentPage;
 import de.voolk.marbles.web.pages.content.MoveContentPage;
+import de.voolk.marbles.web.pages.content.RenamePage;
 
 @SuppressWarnings({"serial", "rawtypes"})
 public class EditPageSidebarPanel extends AbstractContentSidebarPanel {
@@ -58,6 +59,15 @@ public class EditPageSidebarPanel extends AbstractContentSidebarPanel {
             }
         };
 		add(moveLink);
+		Link renameLink = new Link("rename") {
+            @Override
+            public void onClick() {
+                PageParameters parameters = new PageParameters();
+                parameters.put("id", marblesPage.getId());
+                setResponsePage(RenamePage.class, parameters);
+            }
+        };
+		add(renameLink);
 
 		if(marblesPage.isRoot()) {
 			moveLink.setEnabled(false);

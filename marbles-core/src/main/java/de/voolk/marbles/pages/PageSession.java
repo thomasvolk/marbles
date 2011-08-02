@@ -74,4 +74,14 @@ public class PageSession implements IPageSession {
 	public void movePageTo(int sourcePageId, int targetPageId) {
 		getPageService().movePageTo(getUser(), sourcePageId, targetPageId);
 	}
+
+	@Override
+	public void renamePage(Integer id, String name) {
+		getPageService().renamePage(getUser(), id, name);
+	}
+
+	@Override
+	public List<IPage> getChildren( int id) {
+		return getPageService().getChildren(getUser(), id);
+	}
 }

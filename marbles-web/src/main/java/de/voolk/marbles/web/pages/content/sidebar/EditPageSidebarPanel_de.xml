@@ -2,4 +2,5 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <entry key="move.page">Seite verschieben</entry>
+    <entry key="rename.page">Seite umbenenen</entry>
 </properties>

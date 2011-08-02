@@ -24,4 +24,8 @@ public interface IPageSession {
     void traverse(int pageId, IPageTraversationHandler handler);
 
 	void movePageTo(int sourcePageId, int targetPageId);
+
+	void renamePage(Integer id, String name);
+
+	List<IPage> getChildren(int id);
 }

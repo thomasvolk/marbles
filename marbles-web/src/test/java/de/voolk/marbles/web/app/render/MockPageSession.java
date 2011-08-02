@@ -57,4 +57,14 @@ public class MockPageSession implements IPageSession {
 	public void movePageTo(int sourcePageId, int targetPageId) {
 		throw new UnsupportedOperationException("not implemented");
 	}
+
+	@Override
+	public void renamePage(Integer id, String name) {
+		throw new UnsupportedOperationException("not implemented");
+	}
+
+	@Override
+	public List<IPage> getChildren(int id) {
+		throw new UnsupportedOperationException("not implemented");
+	}
 }

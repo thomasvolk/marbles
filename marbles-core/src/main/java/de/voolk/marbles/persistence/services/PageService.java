@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -136,5 +137,25 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
 		source.setParent(target);
 		persist(source);
 		persist(target);
+	}
+
+	@Override
+	public void renamePage(User user, Integer id, String name) {
+		if(StringUtils.isBlank(name)) {
+			throw new IllegalStateException("page name ist blank");
+		}
+		Page page = findPageByUserAndId(user, id);
+		page.setName(name);
+		persist(page);
+	}
+
+	@Override
+	public List<IPage> getChildren(User user, int id) {
+		Page rootPage = findPageByUserAndId(user, id);
+		List<IPage> list = new ArrayList<IPage>();
+		for(Page page: rootPage.getChildren()) {
+			list.add(page);
+		}
+		return list;
 	}
 }
