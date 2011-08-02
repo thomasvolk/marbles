@@ -218,7 +218,7 @@ a:hover {
 
 #sidebar {
 	float: right;
-	width: 160px;
+	width: 167px;
 	padding: 0px;
 	color: #000000;
 	background-color: #F1F1F1;
@@ -306,20 +306,25 @@ a:hover {
 }
 
 div.pageContent {
+    padding: 0 10px;
+}
+
+div.siteContent {
     font-family: monospace;
     padding: 0 10px;
 }
 
-div.pageContent a:hover, a:active {
+
+div.siteContent a:hover, a:active {
 	text-decoration: underline;
 	color: #8A8A8A;
 }
 
-div.pageContent a:visited {
+div.siteContent a:visited {
 	color: #994444;
 }
 
-div.pageContent a:link {
+div.siteContent a:link {
 	color: #994444;
 }
 
@@ -329,7 +334,7 @@ div.pageContent a:link {
 
 
 .bigtable {
-    width: 640px
+    width: 540px;
 }
 
 th {
@@ -357,15 +362,15 @@ form div label {
 
 form div.buttons {
     padding-top: 10px;
-    background-color: #EFEFEF;
 }
 
 div.confirmationBox {
 	font-weight: bold;
     padding: 10px 10px 10px 10px;
-    background: #FFFFFF;
+    background: #FFEEEE;
     border: 1px solid #FF0000;
     font-size: 14px;
+    margin: 10px;
 }
 
 div.confirmationBox span {
@@ -379,7 +384,7 @@ div.confirmationBox a {
 
 #pageContent {
 	height: 255px;
-    width: 560px;
+    width: 550px;
     border: 0;
     font-size: 12px;
 }
