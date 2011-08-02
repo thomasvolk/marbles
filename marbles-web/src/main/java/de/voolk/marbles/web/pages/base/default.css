@@ -207,6 +207,12 @@ a:hover {
 	border: 1px solid #E1E1E1;
 }
 
+#content-base {
+	float: left;
+	width: 560px;
+	padding: 0px 0px 0px 0px;
+}
+
 
 /* Sidebar */
 
@@ -351,6 +357,7 @@ form div label {
 
 form div.buttons {
     padding-top: 10px;
+    background-color: #EFEFEF;
 }
 
 div.confirmationBox {
@@ -372,7 +379,9 @@ div.confirmationBox a {
 
 #pageContent {
 	height: 255px;
-    width: 540px;
+    width: 560px;
+    border: 0;
+    font-size: 12px;
 }
 
 a.arrow {

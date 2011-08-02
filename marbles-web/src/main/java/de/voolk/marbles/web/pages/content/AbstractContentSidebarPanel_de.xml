@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-    <entry key="actions">Aktionen</entry>
     <entry key="cancel">Abbrechen</entry>
     <entry key="open.page">Seite öffnen</entry>
     <entry key="move.page.confirm">Seite verschieben</entry>
