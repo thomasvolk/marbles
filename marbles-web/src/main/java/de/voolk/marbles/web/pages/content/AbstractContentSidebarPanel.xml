@@ -8,4 +8,8 @@
     <entry key="move.page">Move</entry>
     <entry key="move.page.confirm">Move page</entry>
     <entry key="delete.page.confirmation">Do you really want to delete this page ?</entry>
+    <entry key="move.page">Move page</entry>
+    <entry key="rename.page">Rename page</entry>
+    <entry key="sitemap">Site Map</entry>
+    <entry key="editPage">Edit page</entry>
 </properties>

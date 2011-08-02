@@ -8,4 +8,8 @@
     <entry key="move.page">Seite verschieben</entry>
     <entry key="delete.page">Seite löschen</entry>
     <entry key="delete.page.confirmation">Wollen Sie die Seite wirklich löschen ?</entry>
+    <entry key="move.page">Seite verschieben</entry>
+    <entry key="rename.page">Seite umbenenen</entry>
+    <entry key="sitemap">Baumansicht</entry>
+    <entry key="editPage">Seite bearbeiten</entry>
 </properties>
