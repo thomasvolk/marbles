@@ -300,7 +300,6 @@ a:hover {
 
 div.pageContent {
     font-family: monospace;
-
     padding: 0 10px;
 }
 
@@ -370,6 +369,10 @@ div.confirmationBox a {
 	font-weight: bold;
 }
 
+#pageContent {
+	height: 255px;
+    width: 520px;
+}
 
 a.arrow {
 	background: url(arrow_right.png) no-repeat scroll 0 0.3em transparent;
