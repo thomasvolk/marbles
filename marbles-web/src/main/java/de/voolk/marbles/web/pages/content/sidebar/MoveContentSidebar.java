@@ -39,6 +39,14 @@ public class MoveContentSidebar extends AbstractContentSidebarPanel implements I
         };
         moveLink.setEnabled(false);
         add(moveLink);
+        add(new Link("cancel") {
+            @Override
+            public void onClick() {
+                PageParameters parameters = new PageParameters();
+                parameters.put("id", rootPageId);
+                setResponsePage(DisplayContentPage.class, parameters);
+            }
+        });
 	}
 
 

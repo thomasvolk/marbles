@@ -20,7 +20,7 @@ public class DisplaySiteMapPage extends AbstractContentPage {
 	@Override
 	protected void postInit() {
 		super.postInit();
-		SiteMapPanel tree = new SiteMapPanel("tree", getMarblesPageId(),
+		SiteMapPanel tree = new SiteMapPanel("tree", getMarblesPage().getId(),
 				displaySiteMapSidebarPanel);
         add(tree);
 	}
@@ -33,7 +33,7 @@ public class DisplaySiteMapPage extends AbstractContentPage {
 
 	@Override
 	protected Component createSidebarPanel(String id) {
-		displaySiteMapSidebarPanel = new DisplaySiteMapSidebarPanel(id, getMarblesPageId(), this);
+		displaySiteMapSidebarPanel = new DisplaySiteMapSidebarPanel(id, getMarblesPage().getId(), this);
 		return displaySiteMapSidebarPanel;
 	}
 

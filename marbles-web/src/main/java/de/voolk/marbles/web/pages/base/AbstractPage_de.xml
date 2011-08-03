@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
-    <entry key="home">Seiten</entry>
+    <entry key="home">Start</entry>
     <entry key="administration">Administration</entry>
+	<entry key="sitemap">Baumansicht</entry>
 </properties>
