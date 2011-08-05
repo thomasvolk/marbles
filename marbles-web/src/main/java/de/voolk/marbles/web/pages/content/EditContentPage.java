@@ -4,7 +4,6 @@ import org.apache.wicket.Component;
 import org.apache.wicket.Page;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.authorization.strategies.role.annotations.AuthorizeInstantiation;
-import org.apache.wicket.markup.html.WebComponent;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextArea;
@@ -15,12 +14,10 @@ import de.voolk.marbles.web.pages.content.sidebar.EditPageSidebarPanel;
 
 @AuthorizeInstantiation("user")
 public class EditContentPage extends AbstractContentPage {
-	private Component action;
+
 
     public EditContentPage(PageParameters parameters) {
         super(parameters);
-        action = new WebComponent("action");
-        add(action);
         final TextArea<String> contentEdit = new TextArea<String>("pageContent",
                 new PropertyModel<String>(getMarblesPage(), "content"));
         @SuppressWarnings({"serial", "rawtypes"})
@@ -38,10 +35,6 @@ public class EditContentPage extends AbstractContentPage {
         add(form);
     }
 
-    public Component getAction() {
-		return action;
-	}
-
 	protected Class<? extends Page> getDisplayPageClass() {
 		return DisplayContentPage.class;
 	}
@@ -54,7 +47,7 @@ public class EditContentPage extends AbstractContentPage {
 
     @Override
     protected Component createSidebarPanel(String id) {
-        return new EditPageSidebarPanel(this, id, getMarblesPage(),
+        return new EditPageSidebarPanel(id, getMarblesPage(),
         		getDisplayPageClass());
     }
 

@@ -33,7 +33,7 @@ public class MoveContentPage extends AbstractContentPage {
 			marblesPageId = getPageSession().getRootPage().getId();
 		}
 		moveContentSidebar = new MoveContentSidebar(id,
-				marblesPageId, this);
+				marblesPageId, this, DisplayContentPage.class);
 		return moveContentSidebar;
 	}
 

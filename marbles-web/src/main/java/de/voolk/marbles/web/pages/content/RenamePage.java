@@ -58,7 +58,7 @@ public class RenamePage extends AbstractContentPage {
 				int id = savePageName(name);
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", id);
-                setResponsePage(EditContentPage.class, parameters);
+                setResponsePage(DisplayContentPage.class, parameters);
             }
         };
         form.add(pageName);
@@ -90,7 +90,7 @@ public class RenamePage extends AbstractContentPage {
 
 	@Override
 	protected Component createSidebarPanel(String id) {
-		return new RenameSidebar(id, getMarblesPage(), EditContentPage.class);
+		return new RenameSidebar(id, getMarblesPage(), DisplayContentPage.class);
 	}
 
 }

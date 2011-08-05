@@ -1,5 +1,6 @@
 package de.voolk.marbles.web.pages.content.sidebar;
 
+import org.apache.wicket.Page;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.spring.injection.annot.SpringBean;
@@ -22,7 +23,8 @@ public class MoveContentSidebar extends AbstractContentSidebarPanel implements I
 	private IPage selectedPage;
 	private int rootPageId;
 
-	public MoveContentSidebar(String id, final int rootPageId, final MoveContentPage page) {
+	public MoveContentSidebar(String id, final int rootPageId, final MoveContentPage page,
+			final Class<? extends Page> redirectPage) {
 		super(id);
 		this.rootPageId = rootPageId;
 		moveLink = new Link("move") {
@@ -34,7 +36,7 @@ public class MoveContentSidebar extends AbstractContentSidebarPanel implements I
             	}
             	PageParameters parameters = new PageParameters();
                 parameters.put("id", selectedPage.getId());
-            	setResponsePage(DisplayContentPage.class, parameters);
+            	setResponsePage(redirectPage, parameters);
             }
         };
         moveLink.setEnabled(false);
