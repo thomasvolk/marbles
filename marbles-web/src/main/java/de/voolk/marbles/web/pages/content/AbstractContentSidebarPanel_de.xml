@@ -2,13 +2,11 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
     <entry key="cancel">Abbrechen</entry>
-    <entry key="open.page">Seite öffnen</entry>
-    <entry key="move.page.confirm">Seite verschieben</entry>
-    <entry key="move.page">Seite verschieben</entry>
-    <entry key="delete.page">Seite löschen</entry>
+    <entry key="open.page">Öffnen</entry>
+    <entry key="delete.page">Löschen</entry>
     <entry key="delete.page.confirmation">Wollen Sie die Seite wirklich löschen ?</entry>
-    <entry key="move.page">Seite verschieben</entry>
-    <entry key="rename.page">Seite umbenenen</entry>
+    <entry key="move.page">Verschieben</entry>
+    <entry key="rename.page">Umbenenen</entry>
     <entry key="sitemap">Baumansicht</entry>
-    <entry key="editPage">Seite bearbeiten</entry>
+    <entry key="editPage">Bearbeiten</entry>
 </properties>
