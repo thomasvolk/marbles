@@ -12,14 +12,14 @@ import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
-import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
-import de.voolk.marbles.web.pages.content.DisplayContentPage;
-import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
-import de.voolk.marbles.web.pages.content.MoveContentPage;
+import de.voolk.marbles.web.pages.content.AbstractSitePageSidebar;
+import de.voolk.marbles.web.pages.content.DisplayPage;
+import de.voolk.marbles.web.pages.content.SiteMapPage;
+import de.voolk.marbles.web.pages.content.MovePage;
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;
 
 @SuppressWarnings({ "rawtypes", "serial" })
-public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel implements ISiteMapListener {
+public class SiteMapSidebar extends AbstractSitePageSidebar implements ISiteMapListener {
 	private static final long serialVersionUID = 1L;
 	@SpringBean
     private IPageRepository pageRepository;
@@ -29,7 +29,7 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
 	private int rootPageId;
 	private Link moveLink;
 
-	public DisplaySiteMapSidebarPanel(String id, final int rootPageId, final DisplaySiteMapPage page) {
+	public SiteMapSidebar(String id, final int rootPageId, final SiteMapPage page) {
 		super(id);
 		this.rootPageId = rootPageId;
 		deleteLink = new Link("delete") {
@@ -37,7 +37,7 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
 			 public void onClick() {
             	new ReplacingConfirmationActionPanel(page.getAction(),
                         new StringResourceModel("delete.page.confirmation",
-                        		DisplaySiteMapSidebarPanel.this, new Model<ValueMap>())) {
+                        		SiteMapSidebar.this, new Model<ValueMap>())) {
                     @Override
                     public void execute() {
                     	IPageSession session = pageRepository.createSession(getIdentSession().getUser());
@@ -46,7 +46,7 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
                     	}
                         PageParameters parameters = new PageParameters();
                         parameters.put("id", rootPageId);
-                    	setResponsePage(DisplaySiteMapPage.class, parameters);
+                    	setResponsePage(SiteMapPage.class, parameters);
                     }
                 };
             }
@@ -56,7 +56,7 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
 			 public void onClick() {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", selectedPage.getId());
-            	setResponsePage(DisplayContentPage.class, parameters);
+            	setResponsePage(DisplayPage.class, parameters);
             }
         };
         moveLink = new Link("move") {
@@ -64,7 +64,7 @@ public class DisplaySiteMapSidebarPanel extends AbstractContentSidebarPanel impl
             public void onClick() {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", selectedPage.getId());
-                setResponsePage(MoveContentPage.class, parameters);
+                setResponsePage(MovePage.class, parameters);
             }
         };
         deleteLink.setEnabled(false);

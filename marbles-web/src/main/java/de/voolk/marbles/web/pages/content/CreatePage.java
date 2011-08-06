@@ -9,10 +9,10 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.authorization.strategies.role.annotations.AuthorizeInstantiation;
 
 import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.web.pages.content.sidebar.EditPageSidebarPanel;
+import de.voolk.marbles.web.pages.content.sidebar.EditSidebar;
 
 @AuthorizeInstantiation("user")
-public class CreateContentPage extends EditContentPage {
+public class CreatePage extends EditPage {
     @SuppressWarnings("serial")
 	static class NewPageWrapper implements IPage, Serializable {
 		private final String name;
@@ -55,7 +55,7 @@ public class CreateContentPage extends EditContentPage {
 
     }
 
-    public CreateContentPage(PageParameters parameters) {
+    public CreatePage(PageParameters parameters) {
         super(parameters);
     }
 
@@ -89,7 +89,7 @@ public class CreateContentPage extends EditContentPage {
 
     @Override
     protected Component createSidebarPanel(String id) {
-        return new EditPageSidebarPanel(id, getMarblesPage(),
+        return new EditSidebar(id, getMarblesPage(),
         		getDisplayPageClass());
     }
 

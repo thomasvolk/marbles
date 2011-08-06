@@ -10,13 +10,13 @@ import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.model.ResourceModel;
 
-import de.voolk.marbles.web.pages.content.sidebar.EditPageSidebarPanel;
+import de.voolk.marbles.web.pages.content.sidebar.EditSidebar;
 
 @AuthorizeInstantiation("user")
-public class EditContentPage extends AbstractContentPage {
+public class EditPage extends AbstractSitePage {
 
 
-    public EditContentPage(PageParameters parameters) {
+    public EditPage(PageParameters parameters) {
         super(parameters);
         final TextArea<String> contentEdit = new TextArea<String>("pageContent",
                 new PropertyModel<String>(getMarblesPage(), "content"));
@@ -31,12 +31,13 @@ public class EditContentPage extends AbstractContentPage {
             }
         };
         form.add(contentEdit);
-        form.add(new Button("save", new ResourceModel("save")));
+        form.add(new Button("saveTop", new ResourceModel("save")));
+        form.add(new Button("saveBottom", new ResourceModel("save")));
         add(form);
     }
 
 	protected Class<? extends Page> getDisplayPageClass() {
-		return DisplayContentPage.class;
+		return DisplayPage.class;
 	}
 
     protected int savePageContent(String content) {
@@ -47,7 +48,7 @@ public class EditContentPage extends AbstractContentPage {
 
     @Override
     protected Component createSidebarPanel(String id) {
-        return new EditPageSidebarPanel(id, getMarblesPage(),
+        return new EditSidebar(id, getMarblesPage(),
         		getDisplayPageClass());
     }
 

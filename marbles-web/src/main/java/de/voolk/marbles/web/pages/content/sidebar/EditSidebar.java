@@ -5,11 +5,11 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.link.Link;
 
 import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
+import de.voolk.marbles.web.pages.content.AbstractSitePageSidebar;
 
 @SuppressWarnings({"serial", "rawtypes"})
-public class EditPageSidebarPanel extends AbstractContentSidebarPanel {
-    public EditPageSidebarPanel(String id, final IPage marblesPage,
+public class EditSidebar extends AbstractSitePageSidebar {
+    public EditSidebar(String id, final IPage marblesPage,
     		final Class<? extends Page> redirectPage) {
         super(id);
 

@@ -11,13 +11,13 @@ import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
 
 @AuthorizeInstantiation("user")
-public class DeleteContentPage extends WebPage {
+public class DeletePage extends WebPage {
 	@SpringBean
     private IPageRepository pageRepository;
 	private transient IPageSession pageSession;
     private transient IPage page;
 
-    public DeleteContentPage(PageParameters parameters) {
+    public DeletePage(PageParameters parameters) {
         super(parameters);
         IPage marblesPage = getMarblesPage();
         if(marblesPage.isRoot()) {
@@ -28,7 +28,7 @@ public class DeleteContentPage extends WebPage {
 	        getPageSession().removePage(marblesPage.getId());
 	        PageParameters displayParams = new PageParameters();
 			parameters.put("id", parentId);
-			setResponsePage(DisplayContentPage.class, displayParams);
+			setResponsePage(DisplayPage.class, displayParams);
         }
     }
 

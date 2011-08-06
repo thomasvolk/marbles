@@ -24,7 +24,7 @@ import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.web.pages.content.sidebar.RenameSidebar;
 
 @AuthorizeInstantiation("user")
-public class RenamePage extends AbstractContentPage {
+public class RenamePage extends AbstractSitePage {
 
 	@SuppressWarnings("serial")
 	public RenamePage(PageParameters parameters) {
@@ -58,7 +58,7 @@ public class RenamePage extends AbstractContentPage {
 				int id = savePageName(name);
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", id);
-                setResponsePage(DisplayContentPage.class, parameters);
+                setResponsePage(DisplayPage.class, parameters);
             }
         };
         form.add(pageName);
@@ -90,7 +90,7 @@ public class RenamePage extends AbstractContentPage {
 
 	@Override
 	protected Component createSidebarPanel(String id) {
-		return new RenameSidebar(id, getMarblesPage(), DisplayContentPage.class);
+		return new RenameSidebar(id, getMarblesPage(), DisplayPage.class);
 	}
 
 }

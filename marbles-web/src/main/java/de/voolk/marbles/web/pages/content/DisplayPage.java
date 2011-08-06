@@ -10,14 +10,14 @@ import org.apache.wicket.markup.html.basic.Label;
 import de.voolk.marbles.api.pages.render.IPageRenderer;
 import de.voolk.marbles.web.app.UrlResolver;
 import de.voolk.marbles.web.app.render.WebPageRenderer;
-import de.voolk.marbles.web.pages.content.sidebar.DisplayPageSidebarPanel;
+import de.voolk.marbles.web.pages.content.sidebar.DisplaySidebar;
 
 @AuthorizeInstantiation("user")
-public class DisplayContentPage extends AbstractContentPage {
+public class DisplayPage extends AbstractSitePage {
     private transient IPageRenderer pageRenderer;
     private Component action;
 
-    public DisplayContentPage(PageParameters parameters) {
+    public DisplayPage(PageParameters parameters) {
         super(parameters);
         action = new WebComponent("action");
         add(action);
@@ -28,7 +28,7 @@ public class DisplayContentPage extends AbstractContentPage {
 
     @Override
     protected Component createSidebarPanel(String id) {
-        return new DisplayPageSidebarPanel(this, id, getMarblesPage());
+        return new DisplaySidebar(this, id, getMarblesPage());
     }
 
     protected IPageRenderer getPageRenderer() {

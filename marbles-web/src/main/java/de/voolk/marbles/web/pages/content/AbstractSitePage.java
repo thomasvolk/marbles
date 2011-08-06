@@ -12,7 +12,7 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import java.util.List;
 
-public abstract class AbstractContentPage extends AbstractPage {
+public abstract class AbstractSitePage extends AbstractPage {
     @SpringBean
     private IPageRepository pageRepository;
     private transient IPageSession pageSession;
@@ -25,7 +25,7 @@ public abstract class AbstractContentPage extends AbstractPage {
         return pageSession;
     }
 
-    public AbstractContentPage() {
+    public AbstractSitePage() {
         this(null);
     }
 
@@ -33,7 +33,7 @@ public abstract class AbstractContentPage extends AbstractPage {
         return getPageSession().getPagePath(getMarblesPage());
     }
 
-    public AbstractContentPage(PageParameters parameters) {
+    public AbstractSitePage(PageParameters parameters) {
         super(parameters);
         add(getBreadCrumbPanel());
     }

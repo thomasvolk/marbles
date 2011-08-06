@@ -9,9 +9,9 @@ import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
 import de.voolk.marbles.web.pages.HomePage;
 import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
-import de.voolk.marbles.web.pages.content.CreateContentPage;
-import de.voolk.marbles.web.pages.content.DisplayContentPage;
-import de.voolk.marbles.web.pages.content.EditContentPage;
+import de.voolk.marbles.web.pages.content.CreatePage;
+import de.voolk.marbles.web.pages.content.DisplayPage;
+import de.voolk.marbles.web.pages.content.EditPage;
 import de.voolk.marbles.web.pages.registration.LoginPage;
 
 public class MarblesWebApplication extends AuthenticatedWebApplication {
@@ -38,11 +38,11 @@ public class MarblesWebApplication extends AuthenticatedWebApplication {
         mount(new QueryStringUrlCodingStrategy("/admin", ListUserPage.class));
 
         mount(new QueryStringUrlCodingStrategy(getUrlResolver().getDisplayPagePath(),
-                DisplayContentPage.class));
+                DisplayPage.class));
         mount(new QueryStringUrlCodingStrategy(getUrlResolver().getEditPagePath(),
-        		EditContentPage.class));
+        		EditPage.class));
         mount(new QueryStringUrlCodingStrategy(getUrlResolver().getNewPagePath(),
-                CreateContentPage.class));
+                CreatePage.class));
     }
 
     @Override

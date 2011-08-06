@@ -9,13 +9,13 @@ import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
-import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
-import de.voolk.marbles.web.pages.content.DisplayContentPage;
-import de.voolk.marbles.web.pages.content.MoveContentPage;
+import de.voolk.marbles.web.pages.content.AbstractSitePageSidebar;
+import de.voolk.marbles.web.pages.content.DisplayPage;
+import de.voolk.marbles.web.pages.content.MovePage;
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;
 
 @SuppressWarnings({ "rawtypes", "serial" })
-public class MoveContentSidebar extends AbstractContentSidebarPanel implements ISiteMapListener {
+public class MoveSidebar extends AbstractSitePageSidebar implements ISiteMapListener {
 	private static final long serialVersionUID = 1L;
 	@SpringBean
     private IPageRepository pageRepository;
@@ -23,7 +23,7 @@ public class MoveContentSidebar extends AbstractContentSidebarPanel implements I
 	private IPage selectedPage;
 	private int rootPageId;
 
-	public MoveContentSidebar(String id, final int rootPageId, final MoveContentPage page,
+	public MoveSidebar(String id, final int rootPageId, final MovePage page,
 			final Class<? extends Page> redirectPage) {
 		super(id);
 		this.rootPageId = rootPageId;
@@ -46,7 +46,7 @@ public class MoveContentSidebar extends AbstractContentSidebarPanel implements I
             public void onClick() {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", rootPageId);
-                setResponsePage(DisplayContentPage.class, parameters);
+                setResponsePage(DisplayPage.class, parameters);
             }
         });
 	}

@@ -5,13 +5,13 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.WebComponent;
 
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel;
-import de.voolk.marbles.web.pages.content.sidebar.MoveContentSidebar;
+import de.voolk.marbles.web.pages.content.sidebar.MoveSidebar;
 
-public class MoveContentPage extends AbstractContentPage {
+public class MovePage extends AbstractSitePage {
 	private Component action;
-	private MoveContentSidebar moveContentSidebar;
+	private MoveSidebar moveContentSidebar;
 
-	public MoveContentPage(PageParameters parameters) {
+	public MovePage(PageParameters parameters) {
 		super(parameters);
 		action = new WebComponent("action");
         add(action);
@@ -32,8 +32,8 @@ public class MoveContentPage extends AbstractContentPage {
 		if(marblesPageId == null) {
 			marblesPageId = getPageSession().getRootPage().getId();
 		}
-		moveContentSidebar = new MoveContentSidebar(id,
-				marblesPageId, this, DisplayContentPage.class);
+		moveContentSidebar = new MoveSidebar(id,
+				marblesPageId, this, DisplayPage.class);
 		return moveContentSidebar;
 	}
 

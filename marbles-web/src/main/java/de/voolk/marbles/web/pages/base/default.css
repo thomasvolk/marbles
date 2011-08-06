@@ -383,10 +383,11 @@ div.confirmationBox a {
 }
 
 #pageContent {
+	border: 1 none;
 	height: 255px;
-    width: 550px;
-    border: 0;
+    width: 536px;
     font-size: 12px;
+    background: #EEEEEE;
 }
 
 a.arrow {

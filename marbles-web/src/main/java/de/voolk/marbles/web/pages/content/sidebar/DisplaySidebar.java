@@ -12,25 +12,25 @@ import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
-import de.voolk.marbles.web.pages.content.AbstractContentSidebarPanel;
-import de.voolk.marbles.web.pages.content.DeleteContentPage;
-import de.voolk.marbles.web.pages.content.DisplayContentPage;
-import de.voolk.marbles.web.pages.content.EditContentPage;
-import de.voolk.marbles.web.pages.content.MoveContentPage;
+import de.voolk.marbles.web.pages.content.AbstractSitePageSidebar;
+import de.voolk.marbles.web.pages.content.DeletePage;
+import de.voolk.marbles.web.pages.content.DisplayPage;
+import de.voolk.marbles.web.pages.content.EditPage;
+import de.voolk.marbles.web.pages.content.MovePage;
 import de.voolk.marbles.web.pages.content.RenamePage;
 
 @SuppressWarnings({"serial", "rawtypes"})
-public class DisplayPageSidebarPanel extends AbstractContentSidebarPanel {
+public class DisplaySidebar extends AbstractSitePageSidebar {
 	@SpringBean
     private IPageRepository pageRepository;
-    public DisplayPageSidebarPanel(final DisplayContentPage page, String id, final IPage marblesPage) {
+    public DisplaySidebar(final DisplayPage page, String id, final IPage marblesPage) {
         super(id);
         add(new Link("editPage") {
             @Override
             public void onClick() {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", marblesPage.getId());
-                setResponsePage(EditContentPage.class, parameters);
+                setResponsePage(EditPage.class, parameters);
             }
         });
         Link deleteLink = new Link("delete") {
@@ -38,12 +38,12 @@ public class DisplayPageSidebarPanel extends AbstractContentSidebarPanel {
             public void onClick() {
             	new ReplacingConfirmationActionPanel(page.getAction(),
                         new StringResourceModel("delete.page.confirmation",
-                        		DisplayPageSidebarPanel.this, new Model<ValueMap>())) {
+                        		DisplaySidebar.this, new Model<ValueMap>())) {
                     @Override
                     public void execute() {
                     	PageParameters parameters = new PageParameters();
                         parameters.put("id", marblesPage.getId());
-                        setResponsePage(DeleteContentPage.class, parameters);
+                        setResponsePage(DeletePage.class, parameters);
                     }
                 };
             }
@@ -53,7 +53,7 @@ public class DisplayPageSidebarPanel extends AbstractContentSidebarPanel {
             public void onClick() {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", marblesPage.getId());
-                setResponsePage(MoveContentPage.class, parameters);
+                setResponsePage(MovePage.class, parameters);
             }
         };
 		add(moveLink);

@@ -16,8 +16,8 @@ import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
 import de.voolk.marbles.web.pages.base.panel.FooterPanel;
 import de.voolk.marbles.web.pages.base.panel.HeaderPanel;
 import de.voolk.marbles.web.pages.base.panel.MenuPanel;
-import de.voolk.marbles.web.pages.content.DisplayContentPage;
-import de.voolk.marbles.web.pages.content.DisplaySiteMapPage;
+import de.voolk.marbles.web.pages.content.DisplayPage;
+import de.voolk.marbles.web.pages.content.SiteMapPage;
 import de.voolk.marbles.web.pages.registration.LogoutPage;
 
 public abstract class AbstractPage extends WebPage {
@@ -67,8 +67,8 @@ public abstract class AbstractPage extends WebPage {
 
 	private MenuPanel createMenuPanel() {
         MenuPanel menuPanel = new MenuPanel("menu");
-        menuPanel.addItem(new StringResourceModel("home", this, null), DisplayContentPage.class);
-        menuPanel.addItem(new StringResourceModel("sitemap", this, null), DisplaySiteMapPage.class);
+        menuPanel.addItem(new StringResourceModel("home", this, null), DisplayPage.class);
+        menuPanel.addItem(new StringResourceModel("sitemap", this, null), SiteMapPage.class);
         if(getIdentSession().isAdmin()) {
             menuPanel.addItem(new StringResourceModel("administration", this, null), ListUserPage.class);
         }

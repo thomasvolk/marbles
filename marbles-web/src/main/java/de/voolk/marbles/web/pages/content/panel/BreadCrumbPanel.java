@@ -3,7 +3,7 @@ package de.voolk.marbles.web.pages.content.panel;
 
 import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.persistence.services.IPageService;
-import de.voolk.marbles.web.pages.content.DisplayContentPage;
+import de.voolk.marbles.web.pages.content.DisplayPage;
 
 import org.apache.wicket.Page;
 import org.apache.wicket.PageParameters;
@@ -59,6 +59,6 @@ public class BreadCrumbPanel extends Panel {
     }
 
     protected Class<? extends Page> getDisplayPageClass() {
-		return DisplayContentPage.class;
+		return DisplayPage.class;
 	}
 }
