@@ -28,7 +28,7 @@ import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import de.voolk.marbles.persistence.services.IAuthentificationService;
-import de.voolk.marbles.web.pages.admin.auth.sidebar.AuthSidebarPanel;
+import de.voolk.marbles.web.pages.admin.auth.sidebar.AuthSidebar;
 import de.voolk.marbles.web.pages.base.AbstractPage;
 import de.voolk.marbles.web.pages.profile.panel.SetPasswordPanel;
 
@@ -64,6 +64,6 @@ public class CreateUserPage extends AbstractPage {
     }
     @Override
     protected Component createSidebarPanel(String id) {
-        return new AuthSidebarPanel(id);
+        return new AuthSidebar(id);
     }
 }
