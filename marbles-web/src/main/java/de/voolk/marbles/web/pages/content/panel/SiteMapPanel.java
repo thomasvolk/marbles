@@ -43,7 +43,11 @@ public class SiteMapPanel extends Panel implements IPageTraversationHandler {
 
 		@Override
 		public void nodeSelected(Object node) {
-			getListener().pageSelected(getPage(node));
+			DefaultMutableTreeNode treeNode = (DefaultMutableTreeNode) node;
+			PageEntity userObject = (PageEntity) treeNode.getUserObject();
+			if(userObject != null) {
+				getListener().pageSelected(userObject.getPage());
+			}
 		}
 
 		@Override
@@ -60,10 +64,6 @@ public class SiteMapPanel extends Panel implements IPageTraversationHandler {
 
 		@Override
 		public void allNodesCollapsed() {
-		}
-
-		protected IPage getPage(Object node) {
-			return ((PageEntity)((DefaultMutableTreeNode) node).getUserObject()).getPage();
 		}
 	}
 	private class PageEntity {
