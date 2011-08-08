@@ -16,3 +16,6 @@
 /marbles-api/target
 /marbles-api/.classpath
 /marbles-api/.project
+/marbles.ipr
+/marbles.iws
+/marbles.iml
