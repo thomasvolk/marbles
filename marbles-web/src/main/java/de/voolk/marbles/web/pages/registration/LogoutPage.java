@@ -10,7 +10,7 @@ import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.protocol.http.WebResponse;
 
 import de.voolk.marbles.web.app.IdentSession;
-import de.voolk.marbles.web.pages.base.AbstractPage;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
 import de.voolk.marbles.web.pages.base.panel.FooterPanel;
 import de.voolk.marbles.web.pages.base.panel.HeaderPanel;
 
@@ -27,7 +27,7 @@ public class LogoutPage extends SignOutPage {
     private void init() {
         add(new HeaderPanel("header"));
         add(new FooterPanel("footer"));
-        add(CSSPackageResource.getHeaderContribution(AbstractPage.class, "default.css"));
+        add(CSSPackageResource.getHeaderContribution(AbstractMenuPage.class, "default.css"));
         add(new BookmarkablePageLink<String>("home", LoginPage.class));
         ((WebResponse) RequestCycle.get().getResponse()).addCookie(new Cookie(IdentSession.IDENT_COOKIE, null));
     }

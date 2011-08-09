@@ -4,10 +4,10 @@ import org.apache.wicket.Component;
 import org.apache.wicket.markup.html.WebComponent;
 
 import de.voolk.marbles.persistence.beans.User;
-import de.voolk.marbles.web.pages.base.AbstractPage;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
 
 //TODO implement this page
-public class ProfilePage extends AbstractPage {
+public class ProfilePage extends AbstractMenuPage {
 
 	public ProfilePage() {
 	}

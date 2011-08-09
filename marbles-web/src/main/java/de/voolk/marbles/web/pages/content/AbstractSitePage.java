@@ -4,7 +4,7 @@ import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.persistence.beans.User;
-import de.voolk.marbles.web.pages.base.AbstractPage;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
 import de.voolk.marbles.web.pages.content.panel.BreadCrumbPanel;
 
 import org.apache.wicket.PageParameters;
@@ -12,7 +12,7 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import java.util.List;
 
-public abstract class AbstractSitePage extends AbstractPage {
+public abstract class AbstractSitePage extends AbstractMenuPage {
     @SpringBean
     private IPageRepository pageRepository;
     private transient IPageSession pageSession;

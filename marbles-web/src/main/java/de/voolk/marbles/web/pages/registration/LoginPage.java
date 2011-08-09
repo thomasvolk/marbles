@@ -5,7 +5,7 @@ import org.apache.wicket.authentication.panel.SignInPanel;
 import org.apache.wicket.markup.html.CSSPackageResource;
 import org.apache.wicket.markup.html.WebPage;
 
-import de.voolk.marbles.web.pages.base.AbstractPage;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
 import de.voolk.marbles.web.pages.base.panel.FooterPanel;
 import de.voolk.marbles.web.pages.base.panel.HeaderPanel;
 
@@ -18,7 +18,7 @@ public class LoginPage extends WebPage {
         add(new HeaderPanel("header"));
         add(new FooterPanel("footer"));
     	add(new SignInPanel("signInPanel", false));
-    	add(CSSPackageResource.getHeaderContribution(AbstractPage.class,
+    	add(CSSPackageResource.getHeaderContribution(AbstractMenuPage.class,
     			"default.css"));
     }
 

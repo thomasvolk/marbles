@@ -20,32 +20,32 @@ import de.voolk.marbles.web.pages.content.DisplayPage;
 import de.voolk.marbles.web.pages.content.SiteMapPage;
 import de.voolk.marbles.web.pages.registration.LogoutPage;
 
-public abstract class AbstractPage extends WebPage {
-    public AbstractPage() {
+public abstract class AbstractMenuPage extends WebPage {
+    public AbstractMenuPage() {
         init();
     }
 
-    protected AbstractPage(IModel<?> model) {
+    protected AbstractMenuPage(IModel<?> model) {
         super(model);
         init();
     }
 
-    protected AbstractPage(IPageMap pageMap) {
+    protected AbstractMenuPage(IPageMap pageMap) {
         super(pageMap);
         init();
     }
 
-    protected AbstractPage(IPageMap pageMap, IModel<?> model) {
+    protected AbstractMenuPage(IPageMap pageMap, IModel<?> model) {
         super(pageMap, model);
         init();
     }
 
-    protected AbstractPage(PageParameters parameters) {
+    protected AbstractMenuPage(PageParameters parameters) {
         super(parameters);
         init();
     }
 
-    protected AbstractPage(IPageMap pageMap, PageParameters parameters) {
+    protected AbstractMenuPage(IPageMap pageMap, PageParameters parameters) {
         super(pageMap, parameters);
         init();
     }
@@ -55,7 +55,7 @@ public abstract class AbstractPage extends WebPage {
         add(new FooterPanel("footer"));
         add(createSidebarPanel("sidebar"));
         add(new Label("title", "Marbles"));
-        add(CSSPackageResource.getHeaderContribution(AbstractPage.class, "default.css"));
+        add(CSSPackageResource.getHeaderContribution(AbstractMenuPage.class, "default.css"));
         add(new BookmarkablePageLink<String>("logout", getLogoutPage()));
         add(new Label("userName", getLogin()));
         add(createMenuPanel());

@@ -36,11 +36,11 @@ import de.voolk.marbles.persistence.services.IPageService;
 import de.voolk.marbles.web.app.IdentSession;
 import de.voolk.marbles.web.model.UserDataProvider;
 import de.voolk.marbles.web.pages.admin.auth.sidebar.AuthSidebar;
-import de.voolk.marbles.web.pages.base.AbstractPage;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 
 @AuthorizeInstantiation("admin")
-public class ListUserPage extends AbstractPage {
+public class ListUserPage extends AbstractMenuPage {
     @SpringBean
     private IAuthentificationService authentificationService;
     @SpringBean

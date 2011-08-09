@@ -29,11 +29,11 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import de.voolk.marbles.persistence.services.IAuthentificationService;
 import de.voolk.marbles.web.pages.admin.auth.sidebar.AuthSidebar;
-import de.voolk.marbles.web.pages.base.AbstractPage;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
 import de.voolk.marbles.web.pages.profile.panel.SetPasswordPanel;
 
 @AuthorizeInstantiation("admin")
-public class CreateUserPage extends AbstractPage {
+public class CreateUserPage extends AbstractMenuPage {
     @SpringBean
     private IAuthentificationService authentificationService;
     private final FeedbackPanel feedback = new FeedbackPanel("messages");
