@@ -4,14 +4,11 @@ import org.apache.wicket.Component;
 import org.apache.wicket.IPageMap;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.CSSPackageResource;
-import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.StringResourceModel;
 
-import de.voolk.marbles.web.app.IdentSession;
-import de.voolk.marbles.web.app.MarblesWebApplication;
 import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
 import de.voolk.marbles.web.pages.base.panel.FooterPanel;
 import de.voolk.marbles.web.pages.base.panel.HeaderPanel;
@@ -20,42 +17,39 @@ import de.voolk.marbles.web.pages.content.DisplayPage;
 import de.voolk.marbles.web.pages.content.SiteMapPage;
 import de.voolk.marbles.web.pages.registration.LogoutPage;
 
-public abstract class AbstractMenuPage extends WebPage {
+public abstract class AbstractMenuPage extends AbstractPage {
+
     public AbstractMenuPage() {
-        init();
-    }
+		super();
+	}
 
-    protected AbstractMenuPage(IModel<?> model) {
-        super(model);
-        init();
-    }
+	public AbstractMenuPage(IModel<?> model) {
+		super(model);
+	}
 
-    protected AbstractMenuPage(IPageMap pageMap) {
-        super(pageMap);
-        init();
-    }
+	public AbstractMenuPage(IPageMap pageMap, IModel<?> model) {
+		super(pageMap, model);
+	}
 
-    protected AbstractMenuPage(IPageMap pageMap, IModel<?> model) {
-        super(pageMap, model);
-        init();
-    }
+	public AbstractMenuPage(IPageMap pageMap, PageParameters parameters) {
+		super(pageMap, parameters);
+	}
 
-    protected AbstractMenuPage(PageParameters parameters) {
-        super(parameters);
-        init();
-    }
+	public AbstractMenuPage(IPageMap pageMap) {
+		super(pageMap);
+	}
 
-    protected AbstractMenuPage(IPageMap pageMap, PageParameters parameters) {
-        super(pageMap, parameters);
-        init();
-    }
+	public AbstractMenuPage(PageParameters parameters) {
+		super(parameters);
+	}
 
-    private void init() {
+	protected void init() {
+    	super.init();
+        add(CSSPackageResource.getHeaderContribution(AbstractPage.class, "default.css"));
         add(new HeaderPanel("header"));
         add(new FooterPanel("footer"));
         add(createSidebarPanel("sidebar"));
         add(new Label("title", "Marbles"));
-        add(CSSPackageResource.getHeaderContribution(AbstractMenuPage.class, "default.css"));
         add(new BookmarkablePageLink<String>("logout", getLogoutPage()));
         add(new Label("userName", getLogin()));
         add(createMenuPanel());
@@ -81,15 +75,7 @@ public abstract class AbstractMenuPage extends WebPage {
         return getIdentSession().getLogin();
     }
 
-    protected IdentSession getIdentSession() {
-        return ((IdentSession) getSession());
-    }
-
     protected Class<? extends org.apache.wicket.Page> getLogoutPage() {
         return LogoutPage.class;
-    }
-
-    protected MarblesWebApplication getMarblesWebApplication() {
-        return (MarblesWebApplication) getApplication();
     }
 }

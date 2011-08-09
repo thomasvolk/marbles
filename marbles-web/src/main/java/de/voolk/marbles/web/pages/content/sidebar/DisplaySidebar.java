@@ -17,6 +17,7 @@ import de.voolk.marbles.web.pages.content.DeletePage;
 import de.voolk.marbles.web.pages.content.DisplayPage;
 import de.voolk.marbles.web.pages.content.EditPage;
 import de.voolk.marbles.web.pages.content.MovePage;
+import de.voolk.marbles.web.pages.content.PrintPage;
 import de.voolk.marbles.web.pages.content.RenamePage;
 
 @SuppressWarnings({"serial", "rawtypes"})
@@ -25,12 +26,20 @@ public class DisplaySidebar extends AbstractSitePageSidebar {
     private IPageRepository pageRepository;
     public DisplaySidebar(final DisplayPage page, String id, final IPage marblesPage) {
         super(id);
-        add(new Link("editPage") {
+        add(new Link("edit") {
             @Override
             public void onClick() {
                 PageParameters parameters = new PageParameters();
                 parameters.put("id", marblesPage.getId());
                 setResponsePage(EditPage.class, parameters);
+            }
+        });
+        add(new Link("print") {
+            @Override
+            public void onClick() {
+                PageParameters parameters = new PageParameters();
+                parameters.put("id", marblesPage.getId());
+                setResponsePage(PrintPage.class, parameters);
             }
         });
         Link deleteLink = new Link("delete") {

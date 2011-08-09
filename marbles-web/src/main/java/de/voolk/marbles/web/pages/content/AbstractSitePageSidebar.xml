@@ -8,5 +8,6 @@
     <entry key="move.page">Move</entry>
     <entry key="rename.page">Rename</entry>
     <entry key="sitemap">Site Map</entry>
-    <entry key="editPage">Edit</entry>
+    <entry key="edit.page">Edit</entry>
+    <entry key="print.page">Print</entry>
 </properties>

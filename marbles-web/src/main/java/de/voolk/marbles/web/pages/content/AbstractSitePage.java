@@ -1,16 +1,15 @@
 package de.voolk.marbles.web.pages.content;
 
-import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.api.pages.IPageSession;
-import de.voolk.marbles.pages.IPageRepository;
-import de.voolk.marbles.persistence.beans.User;
-import de.voolk.marbles.web.pages.base.AbstractMenuPage;
-import de.voolk.marbles.web.pages.content.panel.BreadCrumbPanel;
+import java.util.List;
 
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
-import java.util.List;
+import de.voolk.marbles.api.beans.IPage;
+import de.voolk.marbles.api.pages.IPageSession;
+import de.voolk.marbles.pages.IPageRepository;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
+import de.voolk.marbles.web.pages.content.panel.BreadCrumbPanel;
 
 public abstract class AbstractSitePage extends AbstractMenuPage {
     @SpringBean
@@ -56,9 +55,5 @@ public abstract class AbstractSitePage extends AbstractMenuPage {
             }
         }
         return page;
-    }
-
-    protected User getUser() {
-        return getIdentSession().getUser();
     }
 }

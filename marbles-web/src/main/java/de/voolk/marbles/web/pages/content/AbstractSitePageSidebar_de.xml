@@ -8,5 +8,6 @@
     <entry key="move.page">Verschieben</entry>
     <entry key="rename.page">Umbenenen</entry>
     <entry key="sitemap">Baumansicht</entry>
-    <entry key="editPage">Bearbeiten</entry>
+    <entry key="edit.page">Bearbeiten</entry>
+    <entry key="print.page">Drucken</entry>
 </properties>
