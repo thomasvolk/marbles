@@ -11,6 +11,18 @@ import de.voolk.marbles.web.app.IUrlResolver;
 import org.apache.commons.lang.StringEscapeUtils;
 
 public class WebPageRenderer extends PageRenderer {
+	public static final String[] IMAGE_SUFFIXES = {
+		".gif", ".jpg", ".jpeg", ".jpe", ".png", ".tif", ".tiff"
+	};
+	public static boolean hasImageSuffix(String original) {
+		for(String suffix: IMAGE_SUFFIXES) {
+			if(original.endsWith(suffix)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
     private final IUrlResolver urlResolver;
     private final IPageSession pageSession;
     public WebPageRenderer(IPageSession pageSession, IUrlResolver urlResolver) {
@@ -83,7 +95,12 @@ public class WebPageRenderer extends PageRenderer {
 
             @Override
             protected String getReplacement(String original) {
-                return String.format("<a href=\"%s\">%s</a>", original, original);
+            	if(original.startsWith("http") && hasImageSuffix(original)) {
+            		return String.format("<img alt=\"%s\" src=\"%s\"/>", original, original);
+            	}
+            	else {
+            		return String.format("<a href=\"%s\">%s</a>", original, original);
+            	}
             }
         });
     }
