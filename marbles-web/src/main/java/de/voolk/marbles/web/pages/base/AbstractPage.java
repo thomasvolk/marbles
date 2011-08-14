@@ -2,7 +2,6 @@ package de.voolk.marbles.web.pages.base;
 
 import org.apache.wicket.IPageMap;
 import org.apache.wicket.PageParameters;
-import org.apache.wicket.markup.html.CSSPackageResource;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.IModel;
 
