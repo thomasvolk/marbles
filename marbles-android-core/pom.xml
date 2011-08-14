@@ -3,23 +3,17 @@
   <parent>
     <artifactId>marbles</artifactId>
     <groupId>de.voolk.marbles</groupId>
-    <version>1.0</version>
+    <version>${marbles.version}</version>
   </parent>
   <groupId>de.voolk.marbles</groupId>
-  <artifactId>marbles-android-core</artifactId>
-  <version>1.0</version>
+  <artifactId>marbles-mobile-web</artifactId>
+  <version>${marbles.version}</version>
   
   <dependencies>
-    <dependency>
-        <groupId>com.google.android</groupId>
-        <artifactId>android</artifactId>
-        <version>2.1.2</version>
-    </dependency>
-
-    <dependency>
-         <groupId>com.thoughtworks.xstream</groupId>
-         <artifactId>xstream</artifactId>
-         <version>1.3.1</version>
+   <dependency>
+    <artifactId>marbles-web</artifactId>
+    <groupId>de.voolk.marbles</groupId>
+    <version>${marbles.version}</version>
     </dependency>
   </dependencies>
 </project>
