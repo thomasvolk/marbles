@@ -1,5 +1,7 @@
 package de.voolk.marbles;
 
+import de.voolk.marbles.test.Jetty;
+
 public class Marbles {
     private static final String NAME = "marbles";
     private static final String WEBAPP = "src/main/webapp";

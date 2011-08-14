@@ -30,6 +30,7 @@
 		<module>marbles-core</module>
 		<module>marbles-web</module>
 		<module>marbles-mobile-web</module>
+		<module>marbles-test</module>
 	</modules>
 
 	<build>

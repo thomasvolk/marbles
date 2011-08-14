@@ -1,4 +1,4 @@
-package de.voolk.marbles;
+package de.voolk.marbles.test;
 
 import org.mortbay.jetty.Connector;
 import org.mortbay.jetty.Server;

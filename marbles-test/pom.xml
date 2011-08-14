@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>marbles</artifactId>
+    <groupId>de.voolk.marbles</groupId>
+    <version>${marbles.version}</version>
+  </parent>
+  <groupId>de.voolk.marbles</groupId>
+  <artifactId>marbles-test</artifactId>
+  <version>${marbles.version}</version>
+
+ <properties>
+    <jetty.version>6.1.4</jetty.version>
+  </properties>
+
+
+  <dependencies>
+   <!--  JETTY DEPENDENCIES FOR TESTING  -->
+       <dependency>
+           <groupId>org.mortbay.jetty</groupId>
+           <artifactId>jetty</artifactId>
+           <version>${jetty.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.mortbay.jetty</groupId>
+           <artifactId>jetty-util</artifactId>
+           <version>${jetty.version}</version>
+       </dependency>
+       <dependency>
+           <groupId>org.mortbay.jetty</groupId>
+           <artifactId>jetty-management</artifactId>
+           <version>${jetty.version}</version>
+       </dependency>
+
+  </dependencies>
+</project>

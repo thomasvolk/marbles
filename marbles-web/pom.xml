@@ -15,7 +15,6 @@
   <url>http://maven.apache.org</url>
    <properties>
     <wicket.version>1.4.15</wicket.version>
-    <jetty.version>6.1.4</jetty.version>
   </properties>
   <dependencies>
     <dependency>
@@ -43,6 +42,7 @@
             <artifactId>wicket-auth-roles</artifactId>
             <version>${wicket.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apache.wicket</groupId>
             <artifactId>wicket-spring</artifactId>
@@ -57,25 +57,11 @@
             <type>jar</type>
         </dependency>
 
-         <!--  JETTY DEPENDENCIES FOR TESTING  -->
-       <dependency>
-           <groupId>org.mortbay.jetty</groupId>
-           <artifactId>jetty</artifactId>
-           <version>${jetty.version}</version>
-           <scope>test</scope>
-       </dependency>
-       <dependency>
-           <groupId>org.mortbay.jetty</groupId>
-           <artifactId>jetty-util</artifactId>
-           <version>${jetty.version}</version>
-           <scope>test</scope>
-       </dependency>
-       <dependency>
-           <groupId>org.mortbay.jetty</groupId>
-           <artifactId>jetty-management</artifactId>
-           <version>${jetty.version}</version>
-           <scope>test</scope>
-       </dependency>
+	<dependency>
+    <artifactId>marbles-test</artifactId>
+    <groupId>de.voolk.marbles</groupId>
+    <version>${marbles.version}</version>
+    </dependency>
 
   </dependencies>
 
