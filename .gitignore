@@ -23,3 +23,7 @@
 /marbles-mobile-web/target
 /marbles-mobile-web/.classpath
 /marbles-mobile-web/.project
+/marbles-test/.settings
+/marbles-test/target
+/marbles-test/.classpath
+/marbles-test/.project
