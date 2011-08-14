@@ -26,9 +26,10 @@
 	</dependencies>
 
 	<modules>
+		<module>marbles-api</module>
 		<module>marbles-core</module>
 		<module>marbles-web</module>
-		<module>marbles-api</module>
+		<module>marbles-mobile-web</module>
 	</modules>
 
 	<build>

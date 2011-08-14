@@ -19,3 +19,7 @@
 /marbles.ipr
 /marbles.iws
 /marbles.iml
+/marbles-mobile-web/.settings
+/marbles-mobile-web/target
+/marbles-mobile-web/.classpath
+/marbles-mobile-web/.project
