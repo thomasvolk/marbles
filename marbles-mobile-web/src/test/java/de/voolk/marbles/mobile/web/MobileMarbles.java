@@ -9,6 +9,6 @@ public class MobileMarbles {
 
     public static void main(String[] args) throws Exception {
         System.setProperty("marbles.env", "inttest");
-        new Jetty(NAME, WEBAPP, PORT, "marbles-web").run();
+        new Jetty(NAME, WEBAPP, PORT, "marbles-mobile-web").run();
     }
 }
