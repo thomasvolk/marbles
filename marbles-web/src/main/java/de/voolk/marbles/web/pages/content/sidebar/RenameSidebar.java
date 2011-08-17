@@ -5,10 +5,10 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.link.Link;
 
 import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.web.pages.content.AbstractSitePageSidebar;
+import de.voolk.marbles.web.pages.base.AbstractSidebar;
 
 @SuppressWarnings({"serial", "rawtypes"})
-public class RenameSidebar extends AbstractSitePageSidebar {
+public class RenameSidebar extends AbstractSidebar {
 
     public RenameSidebar(String id, final IPage marblesPage, final Class<? extends Page> redirectPage) {
         super(id);

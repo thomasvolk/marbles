@@ -11,8 +11,8 @@ import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
+import de.voolk.marbles.web.pages.base.AbstractSidebar;
 import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
-import de.voolk.marbles.web.pages.content.AbstractSitePageSidebar;
 import de.voolk.marbles.web.pages.content.DeletePage;
 import de.voolk.marbles.web.pages.content.DisplayPage;
 import de.voolk.marbles.web.pages.content.EditPage;
@@ -21,7 +21,7 @@ import de.voolk.marbles.web.pages.content.PrintPage;
 import de.voolk.marbles.web.pages.content.RenamePage;
 
 @SuppressWarnings({"serial", "rawtypes"})
-public class DisplaySidebar extends AbstractSitePageSidebar {
+public class DisplaySidebar extends AbstractSidebar {
 	@SpringBean
     private IPageRepository pageRepository;
     public DisplaySidebar(final DisplayPage page, String id, final IPage marblesPage) {

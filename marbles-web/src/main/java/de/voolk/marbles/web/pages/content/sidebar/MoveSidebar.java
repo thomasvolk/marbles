@@ -9,13 +9,13 @@ import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
-import de.voolk.marbles.web.pages.content.AbstractSitePageSidebar;
+import de.voolk.marbles.web.pages.base.AbstractSidebar;
 import de.voolk.marbles.web.pages.content.DisplayPage;
 import de.voolk.marbles.web.pages.content.MovePage;
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;
 
 @SuppressWarnings({ "rawtypes", "serial" })
-public class MoveSidebar extends AbstractSitePageSidebar implements ISiteMapListener {
+public class MoveSidebar extends AbstractSidebar implements ISiteMapListener {
 	private static final long serialVersionUID = 1L;
 	@SpringBean
     private IPageRepository pageRepository;

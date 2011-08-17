@@ -4,10 +4,10 @@ import org.apache.wicket.markup.html.link.Link;
 
 import de.voolk.marbles.web.pages.admin.auth.CreateUserPage;
 import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
-import de.voolk.marbles.web.pages.base.AbstractSidebarPanel;
+import de.voolk.marbles.web.pages.base.AbstractSidebar;
 
 @SuppressWarnings({"serial", "rawtypes"})
-public class AuthSidebar extends AbstractSidebarPanel {
+public class AuthSidebar extends AbstractSidebar {
     public AuthSidebar(String id) {
         super(id);
         add(new Link("createUser") {
