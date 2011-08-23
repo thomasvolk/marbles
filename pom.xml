@@ -5,7 +5,7 @@
 	<packaging>pom</packaging>
 	<version>${marbles.version}</version>
 	<properties>
-	  <marbles.version>1.2.9</marbles.version>
+	  <marbles.version>1.2.10</marbles.version>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <developers>
@@ -29,9 +29,6 @@
 		<module>marbles-api</module>
 		<module>marbles-core</module>
 		<module>marbles-web</module>
-		<!--
-		<module>marbles-mobile-web</module>
-		-->
 		<module>marbles-test</module>
 	</modules>
 

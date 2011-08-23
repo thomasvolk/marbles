@@ -46,7 +46,7 @@ public abstract class AbstractMenuPage extends AbstractPage {
 	protected void init() {
     	super.init();
         add(CSSPackageResource.getHeaderContribution(AbstractPage.class, "default.css"));
-        add(new HeaderPanel("header"));
+        add(new HeaderPanel("header", getSystemInfoService().getVersion()));
         add(new FooterPanel("footer"));
         add(createSidebarPanel("sidebar"));
         add(new Label("title", "Marbles"));

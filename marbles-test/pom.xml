@@ -8,6 +8,7 @@
   <groupId>de.voolk.marbles</groupId>
   <artifactId>marbles-test</artifactId>
   <version>${marbles.version}</version>
+  <name>marbles-test</name>
 
  <properties>
     <jetty.version>6.1.4</jetty.version>

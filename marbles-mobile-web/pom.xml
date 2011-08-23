@@ -8,12 +8,13 @@
   <groupId>de.voolk.marbles</groupId>
   <artifactId>marbles-mobile-web</artifactId>
   <version>${marbles.version}</version>
-  
+
   <dependencies>
    <dependency>
     <artifactId>marbles-web</artifactId>
     <groupId>de.voolk.marbles</groupId>
     <version>${marbles.version}</version>
     </dependency>
+
   </dependencies>
 </project>
