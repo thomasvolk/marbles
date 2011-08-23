@@ -17,6 +17,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 import de.voolk.marbles.api.beans.IPage;
 
@@ -33,7 +34,7 @@ import de.voolk.marbles.api.beans.IPage;
                query = "select count(p) from Page p where parent = :parent")
 })
 @Entity
-@Table(name = "page")
+@Table(name = "page", uniqueConstraints=@UniqueConstraint(columnNames={"name", "parent_id"}))
 public class Page implements Serializable, IPage {
 	private static final long serialVersionUID = 2L;
 

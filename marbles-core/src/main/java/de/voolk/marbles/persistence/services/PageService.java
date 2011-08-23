@@ -81,6 +81,9 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
     @Override
     public Page createPage(IUser user, int parentPageId, String name, String content) {
         Page parent = findById(parentPageId);
+        if(getChildByName(parent, name) != null) {
+        	return null;
+        }
         Page page = new Page();
         page.setParent(parent);
         page.setName(name);
@@ -95,7 +98,16 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
         return page;
     }
 
-    @Override
+    private Page getChildByName(Page parent, String name) {
+		for(Page child: parent.getChildren()) {
+			if(child.getName().equals(name)) {
+				return child;
+			}
+		}
+		return null;
+	}
+
+	@Override
     public List<IPage> getPagePath(IUser user, IPage page) {
         Page currentPage = resolve(Page.class, page);
         List<IPage> path = new ArrayList<IPage>();
