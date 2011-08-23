@@ -46,20 +46,22 @@ public class ListUserPage extends AbstractMenuPage {
     @SpringBean
     private IPageService pageService;
     private Component action;
+    private User selectedUsertoRemove;
 
     @SuppressWarnings("serial")
 	public ListUserPage() {
         action = new WebComponent("action");
         add(action);
         add(new DataView<User>("userList", new UserDataProvider(authentificationService)) {
-
+        	private Link removeLink;
             @Override
             @SuppressWarnings("rawtypes")
             protected void populateItem(Item<User> userItem) {
                 final User user = userItem.getModelObject();
-				Link removeLink = new Link("remove") {
+				removeLink = new Link("remove") {
                     @Override
                     public void onClick() {
+                    	selectedUsertoRemove = user;
                         ValueMap info = new ValueMap();
                         info.put("user", user.getName());
                         new ReplacingConfirmationActionPanel(action,
@@ -71,11 +73,17 @@ public class ListUserPage extends AbstractMenuPage {
                                 authentificationService.removeUser(user.getId());
                                 setResponsePage(ListUserPage.this.getClass());
                             }
+                            @Override
+        					public void cancel() {
+        						super.cancel();
+        						selectedUsertoRemove = null;
+        					}
                         };
                     }
                 };
                 String crossPic = "cross.png";
-				if(authentificationService.userHasRole(user, IdentSession.SYSTEM_ROLE)) {
+				if(authentificationService.userHasRole(user, IdentSession.SYSTEM_ROLE)
+						|| selectedUsertoRemove != null) {
 					removeLink.setEnabled(false);
 					crossPic = "cross_gray.png";
 				}

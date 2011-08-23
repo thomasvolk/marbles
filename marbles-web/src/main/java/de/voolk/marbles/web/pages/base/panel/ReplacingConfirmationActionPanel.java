@@ -18,6 +18,7 @@ package de.voolk.marbles.web.pages.base.panel;
 
 import org.apache.wicket.Component;
 import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.StringResourceModel;
 
 public abstract class ReplacingConfirmationActionPanel extends ConfirmationActionPanel {
     private static final long serialVersionUID = 2L;
@@ -33,7 +34,7 @@ public abstract class ReplacingConfirmationActionPanel extends ConfirmationActio
         original.replaceWith(this);
     }
 
-    @Override
+	@Override
     public void cancel() {
         replaceWith(original);
     }

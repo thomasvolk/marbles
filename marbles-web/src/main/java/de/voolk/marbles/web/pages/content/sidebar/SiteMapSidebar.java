@@ -35,6 +35,7 @@ public class SiteMapSidebar extends AbstractSidebar implements ISiteMapListener 
 		deleteLink = new Link("delete") {
 			@Override
 			 public void onClick() {
+				this.setEnabled(false);
             	new ReplacingConfirmationActionPanel(page.getAction(),
                         new StringResourceModel("delete.page.confirmation",
                         		SiteMapSidebar.this, new Model<ValueMap>())) {
@@ -48,6 +49,13 @@ public class SiteMapSidebar extends AbstractSidebar implements ISiteMapListener 
                         parameters.put("id", rootPageId);
                     	setResponsePage(SiteMapPage.class, parameters);
                     }
+
+					@Override
+					public void cancel() {
+						super.cancel();
+						deleteLink.setEnabled(true);
+					}
+
                 };
             }
         };

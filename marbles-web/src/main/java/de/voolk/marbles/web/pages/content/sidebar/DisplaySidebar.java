@@ -24,6 +24,7 @@ import de.voolk.marbles.web.pages.content.RenamePage;
 public class DisplaySidebar extends AbstractSidebar {
 	@SpringBean
     private IPageRepository pageRepository;
+	private Link deleteLink;
     public DisplaySidebar(final DisplayPage page, String id, final IPage marblesPage) {
         super(id);
         add(new Link("edit") {
@@ -42,9 +43,10 @@ public class DisplaySidebar extends AbstractSidebar {
                 setResponsePage(PrintPage.class, parameters);
             }
         });
-        Link deleteLink = new Link("delete") {
+        deleteLink = new Link("delete") {
             @Override
             public void onClick() {
+            	this.setEnabled(false);
             	new ReplacingConfirmationActionPanel(page.getAction(),
                         new StringResourceModel("delete.page.confirmation",
                         		DisplaySidebar.this, new Model<ValueMap>())) {
@@ -54,6 +56,14 @@ public class DisplaySidebar extends AbstractSidebar {
                         parameters.put("id", marblesPage.getId());
                         setResponsePage(DeletePage.class, parameters);
                     }
+
+					@Override
+					public void cancel() {
+						super.cancel();
+						deleteLink.setEnabled(true);
+					}
+
+
                 };
             }
         };
