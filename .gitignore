@@ -27,3 +27,5 @@
 /marbles-test/target
 /marbles-test/.classpath
 /marbles-test/.project
+*.ico
+desktop.ini
