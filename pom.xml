@@ -5,7 +5,7 @@
 	<packaging>pom</packaging>
 	<version>${marbles.version}</version>
 	<properties>
-	  <marbles.version>1.2.10</marbles.version>
+	  <marbles.version>1.2.11/marbles.version>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <developers>
