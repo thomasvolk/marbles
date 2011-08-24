@@ -53,7 +53,8 @@ public class ListUserPage extends AbstractMenuPage {
         action = new WebComponent("action");
         add(action);
         add(new DataView<User>("userList", new UserDataProvider(authentificationService)) {
-        	private Link removeLink;
+        	@SuppressWarnings("rawtypes")
+			private Link removeLink;
             @Override
             @SuppressWarnings("rawtypes")
             protected void populateItem(Item<User> userItem) {
