@@ -5,12 +5,11 @@
   <parent>
     <artifactId>marbles</artifactId>
     <groupId>de.voolk.marbles</groupId>
-    <version>${marbles.version}</version>
+    <version>1.2.11</version>
   </parent>
 
   <groupId>de.voolk.marbles</groupId>
   <artifactId>marbles-web</artifactId>
-  <version>${marbles.version}</version>
 
   <packaging>war</packaging>
   <name>marbles-web</name>
@@ -24,7 +23,7 @@
     <dependency>
     <artifactId>marbles-core</artifactId>
     <groupId>de.voolk.marbles</groupId>
-    <version>${marbles.version}</version>
+    <version>${project.parent.version}</version>
     </dependency>
     <dependency>
     <groupId>javax.servlet</groupId>
@@ -64,7 +63,7 @@
 	<dependency>
     <artifactId>marbles-test</artifactId>
     <groupId>de.voolk.marbles</groupId>
-    <version>${marbles.version}</version>
+    <version>${project.parent.version}</version>
     </dependency>
 
   </dependencies>

@@ -3,11 +3,10 @@
   <parent>
     <artifactId>marbles</artifactId>
     <groupId>de.voolk.marbles</groupId>
-    <version>${marbles.version}</version>
+    <version>1.2.11</version>
   </parent>
   <groupId>de.voolk.marbles</groupId>
   <artifactId>marbles-test</artifactId>
-  <version>${marbles.version}</version>
   <name>marbles-test</name>
 
  <properties>

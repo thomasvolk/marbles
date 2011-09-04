@@ -3,11 +3,10 @@
   <parent>
     <artifactId>marbles</artifactId>
     <groupId>de.voolk.marbles</groupId>
-    <version>${marbles.version}</version>
+    <version>1.2.11</version>
   </parent>
   <groupId>de.voolk.marbles</groupId>
   <artifactId>marbles-api</artifactId>
-  <version>${marbles.version}</version>
   <packaging>jar</packaging>
   <name>marbles-api</name>
 </project>
