@@ -31,6 +31,13 @@
            <artifactId>jetty-management</artifactId>
            <version>${jetty.version}</version>
        </dependency>
+       
+        <dependency>
+		    <groupId>net.sourceforge.jwebunit</groupId>
+		    <artifactId>jwebunit-htmlunit-plugin</artifactId>
+		    <version>3.0</version>
+		      <scope>test</scope>
+		</dependency>
 
   </dependencies>
 </project>
