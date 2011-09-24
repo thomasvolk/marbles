@@ -14,7 +14,13 @@ public class MarblesWebTest {
 	@Test
 	public void testHomePage() {
 		beginAt("/");
+        assertLinkNotPresent("logoutLnk");
 		assertTitleEquals("Marbles");
+		setTextField("username", "test");
+        setTextField("password", "test");
+        submit();
+        assertLinkPresent("logoutLnk");
+        clickLink("logoutLnk");
 	}
 	
 }
