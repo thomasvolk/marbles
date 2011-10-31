@@ -21,7 +21,7 @@ public class MarblesWebTest {
         setBaseUrl("http://localhost:9099/marbles");
     }
 	 
-	@Test
+	//@Test
 	public void testHomePage() {
 		beginAt("/");
         assertLinkNotPresent("logoutLink");
