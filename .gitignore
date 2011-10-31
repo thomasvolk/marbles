@@ -1,4 +1,6 @@
 
+.settings
+.project
 /marbles-web/.settings
 /marbles-web/target
 /marbles-web/.classpath
@@ -23,6 +25,10 @@
 /marbles-mobile-web/target
 /marbles-mobile-web/.classpath
 /marbles-mobile-web/.project
+/marbles-mobile-web/marblesdb.lck
+/marbles-mobile-web/marblesdb.log
+/marbles-mobile-web/marblesdb.properties
+/marbles-mobile-web/marblesdb.script
 /marbles-test/.settings
 /marbles-test/target
 /marbles-test/.classpath
