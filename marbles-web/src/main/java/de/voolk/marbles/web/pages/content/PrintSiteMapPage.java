@@ -14,7 +14,6 @@ public class PrintSiteMapPage extends AbstractPrintablePage {
 	class SiteMapExporter implements IPageTraversationHandler {
 		private final StringBuilder pages = new StringBuilder();
 		private final StringBuilder toc = new StringBuilder();
-		private int level = 0;
 		@Override
 		public void handle(IPage currentPage, IPage parent) {			
 			String anchor = String.format("page%d", currentPage.getId());
@@ -22,26 +21,11 @@ public class PrintSiteMapPage extends AbstractPrintablePage {
 			pages.append(String.format("<h2>%s</h2>", currentPage.getName()));
 			pages.append(getPageRenderer().toHtml(currentPage));
 			String html = String.format("<li><a href=\"#%s\">%s</a></li>\n",anchor, currentPage.getName());
-			
-			int newLevel = getPageSession().getPagePath(currentPage).size();
-			if(newLevel > level ) {
-				toc.append("<ul>\n");
-			}
-			else if(newLevel < level) {				
-				toc.append("</ul>\n");
-			}
-			if(level != newLevel) {
-				level = newLevel;
-			}
 			toc.append(html);
 		}	
 		
 		public String toString()   {
-			StringBuilder closingUls = new StringBuilder();
-			for(int i = level; i > 1; i--) {
-				closingUls.append("</ul>\n");
-			}
-			String tocHtml = "<ul>\n" + toc.toString() + closingUls.toString() + "</ul>\n";
+			String tocHtml = "<ul>\n" + toc.toString() + "</ul>\n";
 			return tocHtml + pages.toString();
 		}
 	}
