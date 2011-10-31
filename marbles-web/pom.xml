@@ -5,7 +5,7 @@
   <parent>
     <artifactId>marbles</artifactId>
     <groupId>de.voolk.marbles</groupId>
-    <version>1.2.11</version>
+    <version>1.2.12</version>
   </parent>
 
   <groupId>de.voolk.marbles</groupId>
