@@ -1,25 +1,14 @@
 package de.voolk.marbles.web.pages.content;
 
 import org.apache.wicket.PageParameters;
-import org.apache.wicket.markup.html.CSSPackageResource;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.Model;
-import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.api.pages.IPageSession;
-import de.voolk.marbles.api.pages.render.IPageRenderer;
-import de.voolk.marbles.pages.IPageRepository;
-import de.voolk.marbles.web.app.render.WebPageRenderer;
-import de.voolk.marbles.web.pages.base.AbstractPage;
+import de.voolk.marbles.web.pages.base.AbstractPrintablePage;
 
-public class PrintPage extends AbstractPage {
-	@SpringBean
-    private IPageRepository pageRepository;
-	private transient IPageSession pageSession;
+public class PrintPage extends AbstractPrintablePage {
 	private transient IPage page;
-	private transient IPageRenderer pageRenderer;
-
 	public PrintPage(PageParameters parameters) {
 		super(parameters);
         Label content = new Label("page", getPageRenderer().toHtml(getMarblesPage()));
@@ -28,29 +17,7 @@ public class PrintPage extends AbstractPage {
         add(new Label("title", new Model<String>(getMarblesPage().getName())));
 	}
 
-	@Override
-	protected void init() {
-		super.init();
-        add(CSSPackageResource.getHeaderContribution(AbstractPage.class, "print.css"));
-	}
-
-	protected IPageRenderer getPageRenderer() {
-        if(pageRenderer == null) {
-            pageRenderer = new WebPageRenderer(getPageSession(),
-            		getMarblesWebApplication().getUrlResolver());
-        }
-        return pageRenderer;
-    }
-
-	protected IPageSession getPageSession() {
-        if(pageSession == null) {
-            pageSession = pageRepository.createSession(getUser());
-        }
-        return pageSession;
-    }
-
-
-    protected Integer getMarblesPageId() {
+	protected Integer getMarblesPageId() {
         return getPageParameters().getAsInteger("id");
     }
 

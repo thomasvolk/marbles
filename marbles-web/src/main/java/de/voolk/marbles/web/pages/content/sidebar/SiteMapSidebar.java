@@ -16,6 +16,7 @@ import de.voolk.marbles.web.pages.base.panel.ReplacingConfirmationActionPanel;
 import de.voolk.marbles.web.pages.content.DisplayPage;
 import de.voolk.marbles.web.pages.content.MovePage;
 import de.voolk.marbles.web.pages.content.SiteMapPage;
+import de.voolk.marbles.web.pages.content.PrintSiteMapPage;
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;
 
 @SuppressWarnings({ "rawtypes", "serial" })
@@ -75,6 +76,12 @@ public class SiteMapSidebar extends AbstractSidebar implements ISiteMapListener 
                 setResponsePage(MovePage.class, parameters);
             }
         };
+        add(new Link("print") {
+            @Override
+            public void onClick() {
+                setResponsePage(PrintSiteMapPage.class);
+            }
+        });
         deleteLink.setEnabled(false);
         openLink.setEnabled(false);
         moveLink.setEnabled(false);
