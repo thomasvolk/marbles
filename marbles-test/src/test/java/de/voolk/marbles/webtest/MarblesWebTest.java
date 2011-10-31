@@ -16,7 +16,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class MarblesWebTest {
-	@Before
+	//@Before
     public void prepare() {
         setBaseUrl("http://localhost:9099/marbles");
     }
