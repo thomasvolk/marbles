@@ -8,7 +8,7 @@ import org.apache.wicket.markup.html.WebComponent;
 import org.apache.wicket.markup.html.basic.Label;
 
 import de.voolk.marbles.api.pages.render.IPageRenderer;
-import de.voolk.marbles.web.app.render.WebPageRenderer;
+import de.voolk.marbles.web.app.render.MarkdownPageRenderer;
 import de.voolk.marbles.web.pages.content.sidebar.DisplaySidebar;
 
 @AuthorizeInstantiation("user")
@@ -32,7 +32,7 @@ public class DisplayPage extends AbstractSitePage {
 
     protected IPageRenderer getPageRenderer() {
         if(pageRenderer == null) {
-            pageRenderer = new WebPageRenderer(getPageSession(),
+            pageRenderer = new MarkdownPageRenderer(getPageSession(),
             		getMarblesWebApplication().getUrlResolver());
         }
         return pageRenderer;

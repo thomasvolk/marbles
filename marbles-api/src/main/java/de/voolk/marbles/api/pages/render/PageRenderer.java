@@ -45,7 +45,7 @@ public class PageRenderer implements IPageRenderer {
 
     private String doResolveLinks(IPage parentPage, String content) {
         if(getLinkResolver() != null) {
-            Pattern pattern = Pattern.compile("\\" + PAGE_PREFIX + "[a-zA-Z_0-9]+");
+            Pattern pattern = Pattern.compile("\\" + PAGE_PREFIX + "[a-zA-Z0-9]+");
             Matcher matcher = pattern.matcher(content);
             StringBuffer result = new StringBuffer();
 

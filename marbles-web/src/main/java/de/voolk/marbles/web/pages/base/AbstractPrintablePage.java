@@ -9,7 +9,7 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.api.pages.render.IPageRenderer;
 import de.voolk.marbles.pages.IPageRepository;
-import de.voolk.marbles.web.app.render.WebPageRenderer;
+import de.voolk.marbles.web.app.render.SimplePageRenderer;
 
 public abstract class AbstractPrintablePage extends AbstractPage {
 
@@ -50,7 +50,7 @@ public abstract class AbstractPrintablePage extends AbstractPage {
 
 	protected IPageRenderer getPageRenderer() {
 	    if(pageRenderer == null) {
-	        pageRenderer = new WebPageRenderer(getPageSession(),
+	        pageRenderer = new SimplePageRenderer(getPageSession(),
 	        		getMarblesWebApplication().getUrlResolver());
 	    }
 	    return pageRenderer;
