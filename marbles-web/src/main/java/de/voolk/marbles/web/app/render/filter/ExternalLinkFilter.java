@@ -16,7 +16,7 @@ public class ExternalLinkFilter extends AbstractRegularExpressionFilter {
 	} 
 	@Override
     protected String getExpression() {
-         return "((mailto\\:|(news|(ht|f)tp(s?))\\://){1}\\S+)";
+         return "((mailto\\:|(news|(ht|f)tp(s?))\\://){1}[^\\s\\<]+)";
     }
 
     @Override
