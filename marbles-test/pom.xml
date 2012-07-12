@@ -3,9 +3,8 @@
   <parent>
     <artifactId>marbles</artifactId>
     <groupId>de.voolk.marbles</groupId>
-    <version>1.2.12</version>
+    <version>1.3.0</version>
   </parent>
-  <groupId>de.voolk.marbles</groupId>
   <artifactId>marbles-test</artifactId>
   <name>marbles-test</name>
 
