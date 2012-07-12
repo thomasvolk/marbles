@@ -6,7 +6,6 @@ import com.petebevin.markdown.MarkdownProcessor;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.api.pages.render.filter.IContentFilter;
 import de.voolk.marbles.web.app.IUrlResolver;
-import de.voolk.marbles.web.app.render.filter.ExternalLinkFilter;
 import de.voolk.marbles.web.app.render.resolver.PageLinkResolver;
 
 public class MarkdownPageRenderer extends HtmlPageRenderer {
@@ -24,6 +23,5 @@ public class MarkdownPageRenderer extends HtmlPageRenderer {
 				return markdownProcessor.markdown(original);
 			}
 		});
-		addContentFilter(new ExternalLinkFilter());
 	}
 }
