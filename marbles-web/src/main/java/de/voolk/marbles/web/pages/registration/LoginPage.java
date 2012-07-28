@@ -1,6 +1,5 @@
 package de.voolk.marbles.web.pages.registration;
 
-import org.apache.wicket.PageParameters;
 import org.apache.wicket.authentication.panel.SignInPanel;
 import org.apache.wicket.markup.html.CSSPackageResource;
 
@@ -10,14 +9,6 @@ import de.voolk.marbles.web.pages.base.panel.FooterPanel;
 import de.voolk.marbles.web.pages.base.panel.HeaderPanel;
 
 public class LoginPage extends AbstractPage {
-
-    public LoginPage() {
-        this(null);
-    }
-
-    public LoginPage(PageParameters parameters) {
-        super(parameters);
-    }
 
 	@Override
 	protected void init() {

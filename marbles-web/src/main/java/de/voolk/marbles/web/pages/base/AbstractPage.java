@@ -2,8 +2,11 @@ package de.voolk.marbles.web.pages.base;
 
 import org.apache.wicket.IPageMap;
 import org.apache.wicket.PageParameters;
+import org.apache.wicket.Session;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.IModel;
+import org.apache.wicket.protocol.http.ClientProperties;
+import org.apache.wicket.protocol.http.request.WebClientInfo;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
 import de.voolk.marbles.persistence.beans.User;
@@ -65,11 +68,18 @@ public abstract class AbstractPage extends WebPage {
     public String getVariation() {
         return variant;
     }
-    
-    private void _init() {
+
+	private void _init() {
     	PageParameters params = getPageParameters();
     	if(params != null) {
-    		this.variant = params.getString("variant");
+    		variant = params.getString("variant");
+    	}
+    	if(variant == null) {
+    		ClientProperties clientProperties = ((WebClientInfo)Session.get().getClientInfo()).getProperties();
+			if(clientProperties != null) {
+	    		ClinetType ct = ClinetType.getInstace(clientProperties);
+	    		variant = ct.getVariant();
+			}
     	}
     	init();
     }
