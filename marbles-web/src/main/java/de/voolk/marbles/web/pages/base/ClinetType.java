@@ -8,8 +8,8 @@ public enum ClinetType {
 	public static ClinetType getInstace(ClientProperties clientProperties) {
 		ClinetType variant;
 		String navigatorUserAgent = clientProperties.getNavigatorUserAgent();
-		// navigatorUserAgent.contains("Android")
-		if(clientProperties.getBrowserWidth() < 760) {
+		if(navigatorUserAgent.contains("Android") || 
+				clientProperties.getBrowserWidth() < 760) {
 			variant = MOBILE;
 		}
 		else {

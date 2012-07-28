@@ -34,6 +34,7 @@ public class MarblesWebApplication extends AuthenticatedWebApplication {
     @Override
     public void init() {
         super.init();
+        getRequestCycleSettings().setGatherExtendedBrowserInfo(true);
         initSpringComponentInjector();
         mount(new QueryStringUrlCodingStrategy("/admin", ListUserPage.class));
 
