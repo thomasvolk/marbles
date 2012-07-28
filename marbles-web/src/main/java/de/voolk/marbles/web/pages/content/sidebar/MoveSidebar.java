@@ -9,7 +9,7 @@ import de.voolk.marbles.api.beans.IPage;
 import de.voolk.marbles.api.pages.IPageSession;
 import de.voolk.marbles.pages.IPageRepository;
 import de.voolk.marbles.web.app.IdentSession;
-import de.voolk.marbles.web.pages.base.AbstractSidebar;
+import de.voolk.marbles.web.pages.base.sidebar.AbstractSidebar;
 import de.voolk.marbles.web.pages.content.DisplayPage;
 import de.voolk.marbles.web.pages.content.MovePage;
 import de.voolk.marbles.web.pages.content.panel.SiteMapPanel.ISiteMapListener;

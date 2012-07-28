@@ -5,7 +5,7 @@ import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.link.Link;
 
 import de.voolk.marbles.api.beans.IPage;
-import de.voolk.marbles.web.pages.base.AbstractSidebar;
+import de.voolk.marbles.web.pages.base.sidebar.AbstractSidebar;
 
 @SuppressWarnings({"serial", "rawtypes"})
 public class RenameSidebar extends AbstractSidebar {
