@@ -3,7 +3,6 @@ package de.voolk.marbles.web.pages.base;
 import org.apache.wicket.Component;
 import org.apache.wicket.IPageMap;
 import org.apache.wicket.PageParameters;
-import org.apache.wicket.markup.html.CSSPackageResource;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.model.IModel;
@@ -45,14 +44,15 @@ public abstract class AbstractMenuPage extends AbstractPage {
 
 	protected void init() {
     	super.init();
-        add(CSSPackageResource.getHeaderContribution(AbstractPage.class, "default.css"));
         add(new HeaderPanel("header", getSystemInfoService().getVersion()));
         add(new FooterPanel("footer"));
         add(createSidebarPanel("sidebar"));
         add(new Label("title", "Marbles"));
         add(new BookmarkablePageLink<String>("logout", getLogoutPage()));
         add(new Label("userName", getLogin()));
-        add(createMenuPanel());
+        if(getClientType() == ClientType.WEB) {        	
+        	add(createMenuPanel());
+        }
         postInit();
     }
 

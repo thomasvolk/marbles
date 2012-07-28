@@ -3,6 +3,7 @@ package de.voolk.marbles.web.pages.base;
 import org.apache.wicket.IPageMap;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.Session;
+import org.apache.wicket.markup.html.CSSPackageResource;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.protocol.http.ClientProperties;
@@ -75,14 +76,22 @@ public abstract class AbstractPage extends WebPage {
     		variant = params.getString("variant");
     	}
     	if(variant == null) {
-    		ClientProperties clientProperties = ((WebClientInfo)Session.get().getClientInfo()).getProperties();
-			if(clientProperties != null) {
-	    		ClinetType ct = ClinetType.getInstace(clientProperties);
-	    		variant = ct.getVariant();
-			}
+	    	variant = getClientType().getVariant();
     	}
+    	add(CSSPackageResource.getHeaderContribution(AbstractPage.class, 
+        		getStyleSheet()));
     	init();
     }
+	
+	protected String getStyleSheet() {
+		return getClientType().getStylesheet();
+	}
+
+	protected ClientType getClientType() {
+		ClientProperties clientProperties = ((WebClientInfo)Session.get().getClientInfo()).getProperties();
+		ClientType ct = ClientType.getInstace(clientProperties);
+		return ct;
+	}
     
     protected void init() {
     	
