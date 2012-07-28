@@ -14,10 +14,11 @@ import de.voolk.marbles.web.app.MarblesWebApplication;
 public abstract class AbstractPage extends WebPage {
 	@SpringBean
 	private ISystemInfoService systemInfoService;
+	private String variant;
 
 	public AbstractPage() {
 		super();
-		init();
+		_init();
 	}
 
 	protected ISystemInfoService getSystemInfoService() {
@@ -26,27 +27,27 @@ public abstract class AbstractPage extends WebPage {
 
 	public AbstractPage(IModel<?> model) {
 		super(model);
-		init();
+		_init();
 	}
 
 	public AbstractPage(IPageMap pageMap) {
 		super(pageMap);
-		init();
+		_init();
 	}
 
 	public AbstractPage(PageParameters parameters) {
 		super(parameters);
-		init();
+		_init();
 	}
 
 	public AbstractPage(IPageMap pageMap, IModel<?> model) {
 		super(pageMap, model);
-		init();
+		_init();
 	}
 
 	public AbstractPage(IPageMap pageMap, PageParameters parameters) {
 		super(pageMap, parameters);
-		init();
+		_init();
 	}
 
 	protected IdentSession getIdentSession() {
@@ -61,6 +62,19 @@ public abstract class AbstractPage extends WebPage {
         return getIdentSession().getUser();
     }
 
+    public String getVariation() {
+        return variant;
+    }
+    
+    private void _init() {
+    	PageParameters params = getPageParameters();
+    	if(params != null) {
+    		this.variant = params.getString("variant");
+    	}
+    	init();
+    }
+    
     protected void init() {
+    	
     }
 }
