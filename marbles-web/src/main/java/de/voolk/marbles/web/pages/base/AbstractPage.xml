@@ -5,4 +5,5 @@
     <entry key="home">Start</entry>
     <entry key="administration">Administration</entry>
     <entry key="sitemap">Site Map</entry>
+    <entry key="logout">Logout</entry>
 </properties>

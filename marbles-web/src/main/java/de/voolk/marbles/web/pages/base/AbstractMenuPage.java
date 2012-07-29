@@ -53,6 +53,9 @@ public abstract class AbstractMenuPage extends AbstractPage {
         if(getClientType() == ClientType.WEB) {        	
         	add(createMenuPanel());
         }
+        if(getClientType() == ClientType.MOBILE) {        	
+        	add(new BookmarkablePageLink<String>("logoutPage", LogoutPage.class));
+        }
         postInit();
     }
 

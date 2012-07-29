@@ -4,4 +4,5 @@
     <entry key="home">Start</entry>
     <entry key="administration">Administration</entry>
 	<entry key="sitemap">Baumansicht</entry>
+	<entry key="logout">Abmelden</entry>
 </properties>
