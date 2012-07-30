@@ -48,46 +48,9 @@ a:hover {
 /* Breadcrumb */
 
 #breadcrumb {
-	margin: 0px 0px 0px 0px;
-	padding: 0;
-	font-size: 10px;
 	background-color: #F1F1F1;
     border: 1px solid #E1E1E1;
-	height: 30px;
-}
-
-#breadcrumb ul {
-	margin: 0px 0px 0px 0px;
-	padding: 0;
-	list-style: none;
-	line-height: normal;
-}
-
-#breadcrumb li {
-	margin: 0px 0px 0px 0px;
-    padding: 0px 0px 0px 0px;
-    float: left;
-}
-
-#breadcrumb span.separator {
-	padding: 0px 4px 0px 4px;
-}
-
-#breadcrumb li:first-child {
-    padding: 0px 0px 0px 0px;
-    border-left: none;
-}
-
-#breadcrumb a {
-	padding: 0px 0px 0px 0px;
-	border: none;
-	color: #464032;
-    font-size: 10px;
-}
-
-#breadcrumb a:hover {
-	text-decoration: underline;
-	color: #8A8A8A;
+    padding: 10px 10px;
 }
 
 /* Sidebar */
@@ -118,7 +81,7 @@ a:hover {
 #sidebar li li {
 	line-height: 35px;
 	border-bottom: 1px dotted #E5E0C6;
-	margin: 0px 30px;
+	margin: 0px 10px;
 }
 
 #sidebar h2 {
@@ -148,6 +111,7 @@ a:hover {
 	border: none;
 	color: #464032;
 	display: block;
+	font-weight: bold;
 }
 
 #sidebar a:hover {
@@ -155,12 +119,19 @@ a:hover {
 	color: #8A8A8A;
 }
 
+#logout {
+	padding-bottom: 10px
+}
+
 div.button {
 	width: 100%;
 	background-color: #F1F1F1;
     border: 1px solid #E1E1E1;
+    padding: 10px 10px;
 }
 
 div.button a {
 	display: block;
+	height: 15px;
+	font-weight: bold;
 }
