@@ -106,4 +106,12 @@ public class IdentSession extends AuthenticatedWebSession {
         }
         return false;
     }
+
+	@Override
+	public void invalidate() {
+		super.invalidate();
+        ((WebResponse) RequestCycle.get().getResponse()).addCookie(new Cookie(IdentSession.IDENT_COOKIE, null));
+	}
+    
+    
 }
