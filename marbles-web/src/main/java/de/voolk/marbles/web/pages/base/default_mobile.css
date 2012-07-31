@@ -37,7 +37,6 @@ ul, ol {
 
 a {
 	text-decoration: none;
-	/*color: #A7430F;*/
 	color: #F7430F;
 }
 
@@ -124,14 +123,12 @@ a:hover {
 }
 
 div.button {
-	width: 100%;
 	background-color: #F1F1F1;
     border: 1px solid #E1E1E1;
     padding: 10px 10px;
 }
 
 div.button a {
-	display: block;
 	height: 15px;
 	font-weight: bold;
 }
