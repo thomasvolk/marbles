@@ -1,6 +1,7 @@
 
 .settings
 .project
+target
 /marbles-web/.settings
 /marbles-web/target
 /marbles-web/.classpath
