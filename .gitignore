@@ -2,10 +2,10 @@
 .settings
 .project
 target
-/marbles-web/.settings
-/marbles-web/target
-/marbles-web/.classpath
-/marbles-web/.project
+*/.settings
+*/target
+*/.classpath
+*/.project
 /marbles-web/marblesdb.lck
 /marbles-web/marblesdb.log
 /marbles-web/marblesdb.properties
@@ -34,7 +34,6 @@ target
 /marbles-test/target
 /marbles-test/.classpath
 /marbles-test/.project
-*.ico
 desktop.ini
 .idea/
 */*.iml
