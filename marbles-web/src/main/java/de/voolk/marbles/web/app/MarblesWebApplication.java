@@ -1,6 +1,7 @@
 package de.voolk.marbles.web.app;
 
 import org.apache.wicket.Page;
+import org.apache.wicket.ResourceReference;
 import org.apache.wicket.authentication.AuthenticatedWebApplication;
 import org.apache.wicket.authentication.AuthenticatedWebSession;
 import org.apache.wicket.markup.html.WebPage;
