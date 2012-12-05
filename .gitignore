@@ -36,3 +36,6 @@ target
 /marbles-test/.project
 *.ico
 desktop.ini
+.idea/
+*/*.iml
+marblesdb.*
