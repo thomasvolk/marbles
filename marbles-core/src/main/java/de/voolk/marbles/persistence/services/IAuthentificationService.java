@@ -37,4 +37,6 @@ public interface IAuthentificationService {
 	void addRolesToUser(int userId, String ...roleName);
 
 	void setRolesToUser(int userId, String ...roleNames);
+
+    void changePassword(int id, String password);
 }

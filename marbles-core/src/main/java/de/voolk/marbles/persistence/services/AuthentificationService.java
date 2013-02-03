@@ -157,7 +157,13 @@ public class AuthentificationService implements IAuthentificationService  {
 		addRolesToUser(user, roleNames);
 	}
 
-	@Override
+    @Override
+    public void changePassword(int id, String password) {
+        //TODO implement
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
 	public boolean userHasRole(User user, String roleName) {
 		Collection<Role> roles = findRolesForUser(user.getId());
 		for(Role role: roles) {

@@ -1,6 +1,7 @@
 package de.voolk.marbles.web.pages.base.panel;
 
 import de.voolk.marbles.web.app.IdentSession;
+import de.voolk.marbles.web.pages.profile.ProfilePage;
 import de.voolk.marbles.web.pages.registration.LogoutPage;
 import org.apache.wicket.Page;
 import org.apache.wicket.behavior.AttributeAppender;
@@ -49,7 +50,10 @@ public class MenuPanel extends Panel {
 	public MenuPanel(String id) {
         super(id);
         add(new BookmarkablePageLink<String>("logoutPage", LogoutPage.class));
-        add(new Label("userName", getLogin()));
+        BookmarkablePageLink<String> profilePage = new BookmarkablePageLink<String>(
+                "profilePage", ProfilePage.class);
+        add(profilePage);
+        profilePage.add(new Label("userName", getLogin()));
         ListModel<MenuItem> itemsModel = new ListModel<MenuItem>();
         itemsModel.setObject(items);
         add(new ListView<MenuItem>("items", itemsModel) {
