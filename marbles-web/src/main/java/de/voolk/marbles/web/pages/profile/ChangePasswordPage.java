@@ -11,6 +11,8 @@ import org.apache.wicket.markup.html.WebComponent;
 import de.voolk.marbles.web.pages.base.AbstractMenuPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.FormComponent;
+import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.model.ResourceModel;
@@ -21,7 +23,9 @@ public class ChangePasswordPage extends AbstractMenuPage {
     @SpringBean
     private IAuthentificationService authentificationService;
     private final FeedbackPanel feedback = new FeedbackPanel("messages");
+    private FormComponent<String> oldPasswordField;
     private String password;
+    private String oldPassword;
 
     public ChangePasswordPage(PageParameters parameters) {
         add(feedback);
@@ -33,6 +37,9 @@ public class ChangePasswordPage extends AbstractMenuPage {
                 setResponsePage(ListUserPage.class);
             }
         };
+        oldPasswordField = new PasswordTextField("oldPassword",
+                new PropertyModel<String>(this, "oldPassword")).setRequired(true);
+        form.add(oldPasswordField);
 
         SetPasswordPanel passwordPanel = new SetPasswordPanel("passwordPanel",
                 new PropertyModel<String>(this, "password"));

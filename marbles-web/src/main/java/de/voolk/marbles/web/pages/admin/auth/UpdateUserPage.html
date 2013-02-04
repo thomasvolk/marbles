@@ -2,8 +2,8 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd ">
 <head>
-    <title>Marbles</title>
-    <link rel="stylesheet" type="text/css" href="../base/default.css"/>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="../../base/default.css"/>
 </head>
 <body>
 
@@ -36,20 +36,28 @@
                             <wicket:message key="title"/>
                         </h2>
                         <div class="messages" wicket:id="messages"></div>
-                        <form wicket:id="createUserForm">
+                        <form wicket:id="updateUserForm">
 
-                            <div><label for="oldPassword">
-                                <wicket:message key="oldPassword"/>
-                            </label></div>
-                            <input wicket:id="oldPassword" id="oldPassword" type="password"/>
+                            <div>
+                                <div><label for="name">
+                                    <wicket:message key="name"/>
+                                </label></div>
+                                <span wicket:id="name" id="name"/>
+                            </div>
 
-                            <div wicket:id="passwordPanel"></div>
+                            <div>
+                                <div><label for="email">
+                                    <wicket:message key="email"/>
+                                </label></div>
+                                <span wicket:id="email" id="email"/>
+                            </div>
+
+							<div wicket:id="passwordPanel"></div>
 
                             <div class="buttons">
                                 <input type="submit" wicket:id="save"/>
                             </div>
                         </form>
-
                         </div>
                     </wicket:extend>
 
