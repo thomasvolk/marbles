@@ -1,14 +1,8 @@
 package de.voolk.marbles.web.pages.profile;
 
-import de.voolk.marbles.persistence.beans.User;
-import de.voolk.marbles.persistence.services.IAuthentificationService;
-import de.voolk.marbles.web.pages.admin.auth.ListUserPage;
-import de.voolk.marbles.web.pages.profile.panel.SetPasswordPanel;
 import org.apache.wicket.Component;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.WebComponent;
-
-import de.voolk.marbles.web.pages.base.AbstractMenuPage;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.FormComponent;
@@ -18,7 +12,11 @@ import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
-// TODO implement this page
+import de.voolk.marbles.persistence.beans.User;
+import de.voolk.marbles.persistence.services.IAuthentificationService;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
+import de.voolk.marbles.web.pages.profile.panel.SetPasswordPanel;
+
 public class ChangePasswordPage extends AbstractMenuPage {
     @SpringBean
     private IAuthentificationService authentificationService;
@@ -26,7 +24,7 @@ public class ChangePasswordPage extends AbstractMenuPage {
     private FormComponent<String> oldPasswordField;
     private String password;
     private String oldPassword;
-
+    
     public ChangePasswordPage(PageParameters parameters) {
         add(feedback);
         @SuppressWarnings("serial")
@@ -34,7 +32,7 @@ public class ChangePasswordPage extends AbstractMenuPage {
             @Override
             protected void onSubmit() {
                 authentificationService.changePassword(getUser().getId(), password);
-                setResponsePage(ListUserPage.class);
+                setResponsePage(ProfilePage.class);
             }
         };
         oldPasswordField = new PasswordTextField("oldPassword",

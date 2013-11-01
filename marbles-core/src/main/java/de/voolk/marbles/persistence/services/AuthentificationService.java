@@ -159,8 +159,9 @@ public class AuthentificationService implements IAuthentificationService  {
 
     @Override
     public void changePassword(int id, String password) {
-        //TODO implement
-        //To change body of implemented methods use File | Settings | File Templates.
+    	User user = findUserById(id);
+    	user.setPassword(getPasswordDigest().digest(password));
+    	persistUser(user);
     }
 
     @Override

@@ -3,8 +3,8 @@
 <users>
   <user>
     <name>admin</name>
-    <email>thomas@my-volk.de</email>
-    <password>1412e25161ef042b85c59c60a87705a5</password>
+    <email>no-reply@not-exists.org</email>
+    <password>098f6bcd4621d373cade4e832627b4f6</password>
   	<roles class="set">
   	  <role>
   	  	<name>admin</name>
@@ -19,9 +19,8 @@
   </user>
   <user>
     <name>test</name>
-    <email>thomas@my-volk.de</email>
+    <email>no-reply@not-exists.org</email>
     <password>098f6bcd4621d373cade4e832627b4f6</password>
-  	<identKey>14661de0f68cd1f32398be29aa9232e0</identKey>
   	<roles class="set">
   	  <role>
   	    <name>user</name>
@@ -30,8 +29,8 @@
   </user>
   <user>
     <name>guest</name>
-    <email>thomas@my-volk.de</email>
-    <password>a610048f1672991e20b5eee860e9a087</password>
+    <email>no-reply@not-exists.org</email>
+    <password>098f6bcd4621d373cade4e832627b4f6</password>
   	<roles class="set">
   	  <role>
   	    <name>user</name>
