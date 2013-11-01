@@ -3,7 +3,7 @@
 <users>
   <user>
     <name>u1</name>
-    <email>thomas@my-volk.de</email>
+    <email>test@not-exists.com</email>
     <password>adminpw</password>
   	<roles class="set">
   	  <role>
@@ -16,7 +16,7 @@
   </user>
   <user>
     <name>u2</name>
-    <email>thomas@my-volk.de</email>
+    <email>test@not-exists.com</email>
     <password>guestpw</password>
   	<roles class="set">
   	  <role>
@@ -26,7 +26,7 @@
   </user>
   <user>
     <name>u3</name>
-    <email>thomas@my-volk.de</email>
+    <email>test@not-exists.com</email>
     <password>testpw</password>
   	<identKey>testIdentKey</identKey>
   	<roles class="set">
