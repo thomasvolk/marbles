@@ -71,7 +71,17 @@ public class PageService extends AbstractEntityService<Page> implements IPageSer
         catch (NoResultException e) {
             Page page = new Page();
             page.setName("ROOT");
-            page.setContent("This is the ROOT Page please edit ...");
+            StringBuilder sb = new StringBuilder();
+            sb.append("Root Page").append("\n").append("---------").append("\n\n");
+            sb.append("This is the ROOT Page please edit ...").append("\n\n");
+            sb.append("%%ThisIsASubpage").append("\n\n");
+            sb.append("This is a list:").append("\n\n");
+            sb.append("* item1").append("\n");
+            sb.append("* item2").append("\n");
+            sb.append("* item3").append("\n");
+            sb.append("\n");
+            sb.append("for more see [Markdown](http://en.wikipedia.org/wiki/Markdown)");
+            page.setContent(sb.toString());
             page.setUser(resolve(User.class, user));
             persist(page);
             return page;
