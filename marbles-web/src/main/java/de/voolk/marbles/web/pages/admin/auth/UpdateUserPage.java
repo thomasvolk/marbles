@@ -16,21 +16,21 @@
  */
 package de.voolk.marbles.web.pages.admin.auth;
 
-import de.voolk.marbles.persistence.services.IAuthentificationService;
-import de.voolk.marbles.web.pages.admin.auth.sidebar.AuthSidebar;
-import de.voolk.marbles.web.pages.base.AbstractMenuPage;
-import de.voolk.marbles.web.pages.profile.panel.SetPasswordPanel;
 import org.apache.wicket.Component;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.model.ResourceModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
+
+import de.voolk.marbles.persistence.services.IAuthentificationService;
+import de.voolk.marbles.web.pages.admin.auth.sidebar.AuthSidebar;
+import de.voolk.marbles.web.pages.base.AbstractMenuPage;
+import de.voolk.marbles.web.pages.profile.panel.SetPasswordPanel;
 
 @AuthorizeInstantiation("admin")
 public class UpdateUserPage extends AbstractMenuPage {
@@ -41,7 +41,7 @@ public class UpdateUserPage extends AbstractMenuPage {
     private String password;
     private String email;
 
-    @SuppressWarnings({ "unchecked", "rawtypes" })
+    @SuppressWarnings({ "rawtypes" })
 	public UpdateUserPage(PageParameters parameters) {
         add(feedback);
         @SuppressWarnings("serial")

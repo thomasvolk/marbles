@@ -1,3 +1,19 @@
+/**
+ * Copyright (C) 2010  Thomas Volk
+ * <p/>
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * <p/>
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ * <p/>
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package de.voolk.marbles.web.pages.profile;
 
 import org.apache.wicket.Component;
@@ -23,11 +39,12 @@ public class ChangePasswordPage extends AbstractMenuPage {
     private final FeedbackPanel feedback = new FeedbackPanel("messages");
     private FormComponent<String> oldPasswordField;
     private String password;
-    private String oldPassword;
+    @SuppressWarnings("unused")
+	private String oldPassword;
     
     public ChangePasswordPage(PageParameters parameters) {
         add(feedback);
-        @SuppressWarnings("serial")
+        @SuppressWarnings({ "serial", "rawtypes" })
         Form form = new Form("createUserForm") {
             @Override
             protected void onSubmit() {
