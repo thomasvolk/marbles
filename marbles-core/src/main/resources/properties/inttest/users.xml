@@ -27,15 +27,5 @@
   	  </role>
   	</roles>
   </user>
-  <user>
-    <name>guest</name>
-    <email>no-reply@not-exists.org</email>
-    <password>098f6bcd4621d373cade4e832627b4f6</password>
-  	<roles class="set">
-  	  <role>
-  	    <name>user</name>
-  	  </role>
-  	</roles>
-  </user>
 </users>
 </auth>
